@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Historial Médico | Salud Senior</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h2>🩺 Salud Senior</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="historial">
+
+            <h1>📖 Historial Médico</h1>
+            <p>
+                Consulte todas sus consultas médicas realizadas.
+            </p>
+
+            <div class="busqueda">
+
+                <input type="text" id="buscar" placeholder="Buscar especialidad o médico">
+
+                <select id="filtro">
+                    <option>Todas las especialidades</option>
+                    <option>Traumatología</option>
+                    <option>Cardiología</option>
+                    <option>Pediatría</option>
+                    <option>Dermatología</option>
+                    <option>Odontología</option>
+                </select>
+
+                <button id="buscarBtn">
+                    Buscar
+                </button>
+
+            </div>
+
+            <div class="listaHistorial">
+
+                <div class="consulta">
+                    <div>
+                        <h2>Traumatología</h2>
+                        <p>Dr. Stephen Strange</p>
+                        <p>16 de Mayo de 2026</p>
+                    </div>
+
+                    <div>
+                        <span class="atendido">
+                            Atendido
+                        </span>
+
+                        <button>
+                            Ver detalle
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="consulta">
+                    <div>
+                        <h2>Cardiología</h2>
+                        <p>Dra. Ana López</p>
+                        <p>10 de Abril de 2026</p>
+                    </div>
+
+                    <div>
+                        <span class="atendido">
+                            Atendido
+                        </span>
+
+                        <button>
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+
+                <div class="consulta">
+                    <div>
+                        <h2>Dermatología</h2>
+                        <p>Dr. Pablo Díaz</p>
+                        <p>22 de Marzo de 2026</p>
+                    </div>
+
+                    <div>
+                        <span class="cancelado">
+                            Cancelado
+                        </span>
+
+                        <button>
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+
+                <div class="consulta">
+                    <div>
+                        <h2>Odontología</h2>
+                        <p>Dra. Mariana Ruiz</p>
+                        <p>15 de Enero de 2026</p>
+                    </div>
+
+                    <div>
+                        <span class="reprogramado">
+                            Reprogramado
+                        </span>
+
+                        <button>
+                            Ver detalle
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="descargar">
+                Descargar historial
+            </button>
+
+            <button class="volver">
+                Volver al inicio
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Salud Senior
+        </p>
+    </footer>
+
+    <script src="js/historial.js"></script>
+
+</body>
+</html>
