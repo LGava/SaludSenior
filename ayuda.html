@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ayuda | Salud Senior</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h2>🩺 Salud Senior</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="configuracion.html">Configuracion</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="ayuda">
+
+            <h1>¿Necesita ayuda?</h1>
+            <p>
+                Estamos para acompañarlo. Elija una opcion.
+            </p>
+
+            <div class="tarjetasAyuda">
+
+                <div class="cardAyuda">
+
+                    <h2>📞 Contacto</h2>
+                    <p>
+                        Llamenos si necesita asistencia.
+                    </p>
+                    <p>
+                        <strong>0800-123-456</strong>
+                    </p>
+                    <p>
+                        Lunes a viernes
+                        8:00 a 18:00
+                    </p>
+
+                </div>
+
+                <div class="cardAyuda">
+
+                    <h2>📧 Correo</h2>
+                    <p>
+                        saludsenior@gmail.com
+                    </p>
+                    <p>
+                        Respondemos dentro de las 24 horas.
+                    </p>
+
+                </div>
+
+                <div class="cardAyuda">
+
+                    <h2>💬 WhatsApp</h2>
+                    <p>
+                        +54 11 1234-5678
+                    </p>
+
+                    <button id="whatsapp">
+                        Abrir WhatsApp
+                    </button>
+
+                </div>
+
+            </div>
+
+            <h2 class="tituloPreguntas">
+                Preguntas frecuentes
+            </h2>
+
+            <div class="pregunta">
+
+                <button class="acordeon">
+                    ¿Como saco un turno?
+                </button>
+
+                <div class="respuesta">
+                    <p>
+                        Ingrese a "Agendar turno", seleccione la especialidad, el medico y confirme.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pregunta">
+
+                <button class="acordeon">
+                    ¿Como cancelo un turno?
+                </button>
+
+                <div class="respuesta">
+                    <p>
+                        Entre en "Mis Turnos", seleccione el turno y presione "Cancelar".
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pregunta">
+
+                <button class="acordeon">
+                    ¿Puedo cambiar la fecha?
+                </button>
+
+                <div class="respuesta">
+                    <p>
+                        Si. Desde "Mis Turnos" puede elegir la opcion "Reprogramar".
+                    </p>
+                </div>
+
+            </div>
+
+            <h2 class="tituloPreguntas">
+                Enviar una consulta
+            </h2>
+
+            <form id="consulta">
+
+                <label> Nombre </label>
+                <input type="text" id="nombre">
+
+                <label> Correo </label>
+                <input type="email" id="correo">
+
+                <label> Mensaje </label>
+                <textarea id="mensaje"></textarea>
+
+                <button type="submit">
+                Enviar consulta
+                </button>
+
+            </form>
+
+            <button class="volver">
+                Volver al inicio
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Salud Senior
+        </p>
+    </footer>
+
+    <script src="js/ayuda.js"></script>
+
+</body>
+</html>
