@@ -1,0 +1,1034 @@
+/* ------------- ESTILO GENERAL ------------- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F5F5F5;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333333;
+}
+
+header{
+    height:70px;
+
+    background:#FFFFFF;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+    border-bottom:3px solid #6A0DAD;
+}
+
+.logo h2{
+    color:#6A0DAD;
+    font-size:32px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333333;
+
+    font-size:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#6A0DAD;
+}
+
+.usuario{
+    font-size:30px;
+}
+
+.accesibilidad{
+    display:flex;
+    justify-content:center;
+
+    gap:20px;
+    padding:20px;
+}
+
+.accesibilidad button{
+    padding:15px 30px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#6A0DAD;
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.accesibilidad button:hover{
+    background:#4B0082;
+}
+
+.principal{
+    width:90%;
+    margin:50px auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.textoPrincipal{
+    width:50%;
+}
+
+.textoPrincipal h1{
+    font-size:48px;
+    color:#6A0DAD;
+    margin-bottom:25px;
+}
+
+.textoPrincipal p{
+    font-size:24px;
+    line-height:1.6;
+    margin-bottom:40px;
+}
+
+.imagenPrincipal{
+    width:40%;
+    display:flex;
+    justify-content:center;
+}
+
+.imagenPrincipal img{
+    width:100%;
+    max-width:420px;
+}
+
+.botones{
+    display:flex;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.botones button{
+    flex:1;
+    height:65px;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#6A0DAD;
+    color:white;
+
+    font-size:22px;
+    font-weight:bold;
+}
+
+.botones button:hover{
+    background:#4B0082;
+}
+
+.enlaces a{
+    color:#6A0DAD;
+    text-decoration:none;
+
+    font-size:20px;
+
+}
+
+.enlaces a:hover{
+    text-decoration:underline;
+}
+
+/*----------------TARJETAS----------------*/
+.beneficios,
+.opiniones{
+    width:90%;
+    margin:auto;
+    margin-top:70px;
+}
+
+.beneficios h2,
+.opiniones h2,
+.estadisticas h2{
+    text-align:center;
+
+    color:#6A0DAD;
+
+    font-size:38px;
+
+    margin-bottom:40px;
+}
+
+.tarjetas{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+}
+
+.tarjeta{
+    background:white;
+
+    width:320px;
+    padding:30px;
+
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    text-align:center;
+}
+
+.tarjeta h3{
+    color:#6A0DAD;
+    margin-bottom:20px;
+    font-size:26px;
+}
+
+.tarjeta p{
+    font-size:20px;
+    line-height:1.6;
+}
+
+/*-----------------------ESTADISTICAS------------------------*/
+
+.estadisticas{
+    width:90%;
+    margin:70px auto;
+}
+
+.numeros{
+    display:flex;
+    justify-content:space-around;
+    gap:20px;
+}
+
+.numeros div{
+    background:white;
+
+    width:220px;
+    padding:30px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 5px 10px rgba(0,0,0,.15);
+}
+
+.numeros h3{
+    color:#6A0DAD;
+    font-size:40px;
+}
+
+.numeros p{
+    font-size:22px;
+}
+
+/*------------------FOOTER----------------*/
+
+footer{
+    background:#333333;
+    color:white;
+
+    margin-top:80px;
+    padding:40px;
+
+    display:flex;
+    justify-content:space-around;
+
+    flex-wrap:wrap;
+}
+
+footer h3{
+    margin-bottom:20px;
+    color:#FFFFFF;
+}
+
+footer p{
+    margin-bottom:10px;
+}
+
+footer hr{
+    width:100%;
+    margin:30px 0;
+}
+
+footer>p{
+    width:100%;
+    text-align:center;
+}
+
+/*--------------------LOGIN-------------------*/
+
+.login{
+    width:500px;
+    margin:60px auto;
+
+    background:white;
+
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+}
+
+.login h1{
+    text-align:center;
+    color:#6A0DAD;
+    margin-bottom:20px;
+}
+
+.login p{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:20px;
+}
+
+.login label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:10px;
+
+    font-size:22px;
+    font-weight:bold;
+}
+
+.login input{
+    width:100%;
+    height:55px;
+    padding:10px;
+
+    font-size:20px;
+
+    border:2px solid #CCCCCC;
+    border-radius:10px;
+}
+
+.login button{
+    width:100%;
+    margin-top:30px;
+    height:60px;
+
+    border:none;
+
+    background:#6A0DAD;
+    color:white;
+
+    font-size:22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.login button:hover{
+    background:#4B0082;
+}
+
+.opciones{
+    display:flex;
+    justify-content:space-between;
+    margin-top:25px;
+}
+
+.opciones a{
+    color:#6A0DAD;
+    font-size:18px;
+    text-decoration:none;
+}
+
+.volver{
+    background:#888888 !important;
+}
+
+/*--------------------------REGISTRO----------------------------*/
+
+.registro{
+    width:850px;
+    margin:50px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+    box-shadow:0px 5px 15px rgba(0,0,0,.15);
+}
+
+.registro h1{
+    text-align:center;
+    color:#6A0DAD;
+    margin-bottom:15px;
+}
+
+.registro p{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.fila{
+    display:flex;
+    gap:25px;
+    margin-bottom:20px;
+}
+
+.fila div{
+    flex:1;
+}
+
+.registro label{
+    display:block;
+    margin-bottom:8px;
+
+    font-size:20px;
+    font-weight:bold;
+}
+
+.registro input{
+    width:100%;
+    height:55px;
+    padding:10px;
+
+    font-size:20px;
+
+    border:2px solid #CCCCCC;
+    border-radius:10px;
+}
+
+.registro button{
+    width:100%;
+    height:60px;
+    margin-top:30px;
+
+    background:#6A0DAD;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:22px;
+
+    cursor:pointer;
+}
+
+.registro button:hover{
+    background:#4B0082;
+}
+
+.centrado{
+    margin-top:25px;
+    text-align:center;
+}
+
+.centrado a{
+    color:#6A0DAD;
+    font-weight:bold;
+}
+
+/*------------------------RECUPERAR CONTRASEÑA--------------------*/
+
+.recuperar{
+    width:600px;
+    margin:60px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.recuperar h1{
+    text-align:center;
+    color:#6A0DAD;
+    margin-bottom:20px;
+}
+
+.recuperar p{
+    text-align:center;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.recuperar label{
+    display:block;
+    margin-top:20px;
+
+    margin-bottom:10px;
+
+    font-size:20px;
+    font-weight:bold;
+}
+
+.recuperar input{
+    width:100%;
+    height:55px;
+    padding:10px;
+
+    font-size:20px;
+
+    border:2px solid #CCCCCC;
+    border-radius:10px;
+}
+
+.recuperar button{
+    width:100%;
+    height:60px;
+    margin-top:30px;
+
+    background:#6A0DAD;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:22px;
+
+    cursor:pointer;
+}
+
+.o{
+    margin-top:20px;
+    margin-bottom:20px;
+    font-weight:bold;
+    color:#6A0DAD;
+}
+
+/*-----------------------INICIO----------------------*/
+
+.bienvenidaInicio{
+    text-align:center;
+    margin:40px 0;
+}
+
+.bienvenidaInicio h1{
+    color:#6A0DAD;
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.bienvenidaInicio p{
+    font-size:22px;
+}
+
+/* MENu */
+
+.menuPrincipal{
+    width:90%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+.opcion{
+    background:white;
+
+    border-radius:15px;
+    padding:35px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.opcion:hover{
+    transform:scale(1.04);
+}
+
+.opcion h2{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.opcion h3{
+    color:#6A0DAD;
+    margin-bottom:15px;
+    font-size:26px;
+}
+
+.opcion p{
+    font-size:20px;
+}
+
+.proximoTurno{
+    width:90%;
+    margin:60px auto;
+}
+
+.tarjetaTurno{
+    background:white;
+
+    padding:30px;
+
+    border-left:8px solid #6A0DAD;
+    border-radius:12px;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+.tarjetaTurno h3{
+    color:#6A0DAD;
+    margin-bottom:10px;
+}
+
+.tarjetaTurno p{
+    margin:8px 0;
+    font-size:20px;
+}
+
+.tarjetaTurno button{
+    margin-top:20px;
+    width:220px;
+    height:55px;
+
+    background:#6A0DAD;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+/*------------------------CONFIGURACION-------------------------*/
+
+.configuracion{
+    width:900px;
+    margin:50px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+    box-shadow:0px 5px 15px rgba(0,0,0,.15);
+}
+
+.configuracion h1{
+    text-align:center;
+    color:#6A0DAD;
+    margin-bottom:20px;
+    }
+
+.configuracion>p{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:40px;
+}
+
+.opcionConfiguracion{
+    padding:25px;
+    margin-bottom:25px;
+
+    border:2px solid #E6E6E6;
+    border-radius:12px;
+}
+
+.opcionConfiguracion h2{
+    color:#6A0DAD;
+    margin-bottom:10px;
+}
+
+.opcionConfiguracion p{
+    margin-bottom:20px;
+}
+
+.opcionConfiguracion button{
+    margin-right:15px;
+    width:140px;
+    height:55px;
+
+    background:#6A0DAD;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+.opcionConfiguracion select{
+    width:250px;
+    height:50px;
+
+    font-size:18px;
+
+    padding:10px;
+}
+
+#guardar{
+    width:100%;
+    height:60px;
+
+    background:#6A0DAD;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:22px;
+
+    margin-top:20px;
+}
+
+.volver{
+    margin-top:20px;
+    width:100%;
+    height:55px;
+
+    background:#777;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+}
+
+.switch{
+    display:inline-block;
+    position:relative;
+
+    width:60px;
+    height:34px;
+}
+
+.switch input{
+    display:none;
+}
+
+.slider{
+    position:absolute;
+    cursor:pointer;
+
+    background:#ccc;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    border-radius:30px;
+}
+
+.slider::before{
+    content:"";
+
+    position:absolute;
+
+    width:26px;
+    height:26px;
+    left:4px;
+    top:4px;
+
+    background:white;
+
+    border-radius:50%;
+}
+
+input:checked + .slider{
+    background:#6A0DAD;
+}
+
+input:checked + .slider::before{
+    transform:translateX(26px);
+}
+
+/*--------------------- AYUDA-------------------*/
+
+.ayuda{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.ayuda h1{
+    text-align:center;
+    color:#6A0DAD;
+    margin-bottom:15px;
+}
+
+.ayuda>p{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:35px;
+}
+
+.tarjetasAyuda{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+
+    margin-bottom:40px;
+}
+
+.cardAyuda{
+    background:#F8F3FF;
+
+    padding:25px;
+    border-radius:12px;
+
+    text-align:center;
+}
+
+.cardAyuda h2{
+    color:#6A0DAD;
+    margin-bottom:15px;
+}
+
+.cardAyuda button{
+    margin-top:15px;
+    width:100%;
+    height:50px;
+
+    background:#6A0DAD;
+    color:white;
+
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+.tituloPreguntas{
+    margin-top:40px;
+    margin-bottom:20px;
+    color:#6A0DAD;
+}
+
+.acordeon{
+    width:100%;
+    padding:18px;
+    margin-top:10px;
+
+    font-size:20px;
+    text-align:left;
+
+    background:#EEE;
+
+    cursor:pointer;
+
+    border:none;
+    border-radius:8px;
+}
+
+.respuesta{
+    display:none;
+    padding:20px;
+    background:#FAFAFA;
+}
+
+#consulta{
+    margin-top:30px;
+}
+
+#consulta label{
+    display:block;
+
+    margin-top:20px;
+    margin-bottom:8px;
+
+    font-weight:bold;
+}
+
+#consulta input,
+#consulta textarea{
+    width:100%;
+    padding:15px;
+
+    font-size:18px;
+
+    border:2px solid #CCC;
+    border-radius:8px;
+}
+
+#consulta textarea{
+    height:120px;
+    resize:none;
+}
+
+#consulta button{
+    margin-top:20px;
+    width:100%;
+    height:55px;
+
+    background:#6A0DAD;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:20px;
+}
+
+.volver{
+    margin-top:25px;
+    width:100%;
+    height:55px;
+
+    background:#666;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+}
+
+/*------------------NOTIFICACIONES----------------*/
+
+.notificaciones{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.notificaciones h1{
+    text-align:center;
+    color:#6A0DAD;
+}
+
+.notificaciones>p{
+    text-align:center;
+    margin:20px 0 35px;
+    font-size:20px;
+}
+
+.barraNotificaciones{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    margin-bottom:30px;
+}
+
+.barraNotificaciones button{
+    padding:15px 20px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#6A0DAD;
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.listaNotificaciones{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.notificacion{
+    padding:25px;
+
+    background:#FAFAFA;
+
+    border-left:8px solid #CCCCCC;
+    border-radius:10px;
+}
+
+.notificacion h2{
+    color:#6A0DAD;
+    margin-bottom:10px;
+}
+
+.notificacion p{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.nueva{
+    border-left:8px solid #6A0DAD;
+    background:#F7F1FF;
+}
+
+.estado{
+    font-weight:bold;
+    color:#6A0DAD;
+}
+
+.volver{
+    margin-top:35px;
+    width:100%;
+    height:55px;
+
+    background:#666;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+/*---------------------RESPONSIVE------------------*/
+
+@media(max-width:900px){
+
+    .principal{
+        flex-direction:column;
+    }
+
+    .textoPrincipal{
+        width:100%;
+        text-align:center;
+    }
+
+    .imagenPrincipal{
+        width:80%;
+        margin-top:40px;
+    }
+
+    .tarjetas{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .numeros{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+}
