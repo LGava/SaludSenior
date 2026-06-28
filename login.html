@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar Sesion</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            <h2>🩺 Salud Senior</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="login">
+
+            <h1>Iniciar sesion</h1>
+            <p>
+                Ingrese sus datos para acceder a su cuenta.
+            </p>
+
+            <form id="formLogin">
+
+                <label>DNI</label>
+                <input type="text" id="dni" placeholder="Ingrese su DNI">
+
+                <label> Contraseña </label>
+                <input type="password" id="clave" placeholder="Ingrese su contraseña">
+
+                <button type="submit">
+                    Ingresar
+                </button>
+
+            </form>
+
+            <div class="opciones">
+
+                <a href="recuperar.html">
+                    ¿Olvido su contraseña?
+                </a>
+
+                <a href="registro.html">
+                    Registrarse
+                </a>
+
+            </div>
+
+            <button class="volver" onclick="location.href='index.html'">
+                Volver al inicio
+            </button>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Salud Senior
+        </p>
+    </footer>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>
