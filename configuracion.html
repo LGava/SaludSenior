@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configuracion | Salud Senior</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h2>🩺 Salud Senior</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="misDatos.html">Mis Datos</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="configuracion">
+
+            <h1>⚙ Configuracion</h1>
+            <p>
+                Personalice la aplicacion para que sea mas comoda de utilizar.
+            </p>
+
+            <div class="opcionConfiguracion">
+
+                <h2>Tamaño del texto</h2>
+                <p>
+                    Seleccione el tamaño de letra que le resulte mas comodo.
+                </p>
+
+                <button id="disminuir">A-</button>
+                <button id="normal">Normal</button>
+                <button id="aumentar">A+</button>
+
+            </div>
+
+            <div class="opcionConfiguracion">
+
+                <h2>Contraste</h2>
+                <p>
+                    Mejore la visibilidad aumentando el contraste.
+                </p>
+
+                <button id="contraste">
+                    Activar / Desactivar
+                </button>
+
+            </div>
+
+            <div class="opcionConfiguracion">
+
+                <h2>Sonidos</h2>
+                <p>
+                    Escuchar un sonido cuando se confirme una accion.
+                </p>
+
+                <label class="switch">
+                    <input type="checkbox" id="sonidos">
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+            <div class="opcionConfiguracion">
+
+                <h2>Recordatorios</h2>
+                <p>
+                    Recibir recordatorios antes del turno.
+                </p>
+
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+            <div class="opcionConfiguracion">
+
+                <h2>Idioma</h2>
+                <select>
+                    <option>Español</option>
+                    <option>English</option>
+                    <option>Portugues</option>
+                </select>
+
+            </div>
+
+            <button id="guardar">
+                Guardar cambios
+            </button>
+
+            <button class="volver">
+                Volver
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Salud Senior
+        </p>
+    </footer>
+
+    <script src="js/configuracion.js"></script>
+
+</body>
+</html>
