@@ -1,383 +1,644 @@
+/*=================================================
+                CONFIGURACIÓN GENERAL
+=================================================*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#FFFDF9;
+    color:#444;
 
-    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
 
-    background:#F5F5F5;
+    width:100%;
+    min-height:100vh;
 
-    display: flex;
+    line-height:1.6;
+}
 
-    justify-content: center;
 
-    align-items: center;
+.contenedor-principal{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+    min-height:100vh;
 
-    min-height: 100vh;
+    background:#fff;
+
+    display:flex;
+    flex-direction:column;
+}
+
+
+/*=================================================
+                ENCABEZADO
+=================================================*/
+
+.encabezado{
+
+    background:#F8FAFB;
+
+    border-bottom:1px solid #E2E8F0;
+
+    padding:45px 20px;
+
+    text-align:center;
 
 }
 
-.encabezado {
-    background-color: #f8fafc; /* Un gris/azul híper sutil que le da estructura */
-    border-bottom: 1px solid #e2e8f0;
-    padding: 35px 20px;       /* Un poco más de aire arriba y abajo en PC */
-    margin-bottom: 25px;      /* Despega el título del mapa */
-    text-align: center;
-    width: 100%;
-}
+.encabezado img{
 
-.encabezado h1 {
+    width:100px;
 
-    font-size: 28px;
-
-    color: #0f172a;
+    margin-bottom:20px;
 
 }
 
-/*nuevo*/
-header{
-    height:70px;
+.encabezado h1{
+
+    font-size:36px;
+
+    color:#45627C;
+
+    margin-bottom:10px;
+
+}
+
+.encabezado p{
+
+    font-size:21px;
+
+    color:#666;
+
+}
+
+
+/* ==========================
+   ENCABEZADO CONFIRMACIÓN
+========================== */
+
+.encabezado-confirmacion{
+    text-align:center;
+    background:linear-gradient(135deg,#E8F5E9,#FFFFFF);
+    padding:40px 20px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.icono-ok{
+    font-size:70px;
+    color:#2E7D32;
+    margin-bottom:10px;
+    display:block;
+}
+
+.encabezado-confirmacion h1{
+    font-size:32px;
+    color:#1F2D3A;
+    margin-bottom:10px;
+}
+
+.encabezado-confirmacion p{
+    font-size:18px;
+    color:#5B6B7A;
+}
+
+
+/*=================================================
+                LISTA DE MÉDICOS
+=================================================*/
+
+.lista-medicos{
+
+    width:100%;
+
+    max-width:750px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/*=================================================
+                TARJETA MÉDICO
+=================================================*/
+
+.tarjeta-medico{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
 
     background:#FFFFFF;
 
-    display:flex;
+    padding:25px;
 
-    justify-content:space-between;
-    align-items:center;
+    border-radius:20px;
 
-    padding:0 40px;
+    border:2px solid #E7ECEF;
 
-    border-bottom:3px solid #6A0DAD;
-}
+    cursor:pointer;
 
-.logo h2{
-    color:#6A0DAD;
-    font-size:32px;
-}
+    transition:.3s;
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#333333;
-
-    font-size:20px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#6A0DAD;
-}
-
-.usuario{
-    font-size:30px;
-}
-
-/**/
-
-
-.contenedor-principal {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.navegacion {
-
-    margin-top: auto;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 10px;
-
-    border-top: 1px solid #ddd;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
 
 }
 
-.btn-volver,
-.btn-siguiente {
+.tarjeta-medico:hover{
 
-    display: flex;
+    transform:translateY(-4px);
 
-    align-items: center;
+    border-color:#B6D2E4;
 
-    gap: 6px;
-
-    padding: 10px 18px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background: #6A0DAD;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 
 }
 
-.btn-siguiente:disabled {
-    background-color: #cbd5e1;
-
-    color: #64748b;
-
-    cursor: not-allowed;
-}
-/*tarjeta-medica*/
-
-.lista-medicos {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 550px;        /* Ancho máximo ideal para que se vea como tarjeta de escritorio */
-    margin: 0 auto;          /* Centra la tarjeta horizontalmente */
-}
-
-
-.tarjeta-medico {
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    gap: 10px;
-    padding: 10px;
-    background: white;
-    border-radius: 8px;
-    width: 100%;             /* Asegura que llene el espacio de la lista */
-}
+/* Foto */
 
 .foto-medico img{
 
-    width: 60px;
-    height: 60px;
+    width:90px;
 
-    border-radius: 50%;
+    height:90px;
 
-    object-fit: cover;
-    border: 2px solid black;
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #B6D2E4;
 
 }
-  
+
+/* Información */
+
+.info-medico{
+
+    flex:1;
+
+}
+
 .nombre-medico{
-    margin-top: 5px;
-    font-size: 20px;
+
+    font-size:25px;
+
+    color:#45627C;
+
+    margin-bottom:8px;
+
 }
 
 .rating-medico{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    gap: 8px;
+    gap:10px;
 
-    margin: 5px 0;
+    margin-bottom:10px;
 
 }
 
 .estrellas{
 
-    color: gold;
+    color:#F4C542;
 
-    font-size: 22px;
+    font-size:24px;
 
 }
 
 .puntaje{
 
-    padding-top: 13px;
-    font-size: 14px;
+    font-size:18px;
+
+    color:#666;
 
 }
 
 .hospital{
 
-    margin: 3px 0;
+    font-size:19px;
 
-    font-size: 15px;
+    color:#666;
+
+    margin-bottom:6px;
 
 }
 
 .experiencia{
-    
-    font-size: 15px;
+
+    font-size:18px;
+
+    color:#666;
 
 }
 
-.icono-resumen{
-
-    text-align:center;
-
-    margin-top:30px;
-
+/*=================================================
+                RESUMEN
+=================================================*/
+.resumen-turno{
+    margin-bottom:25px;
 }
 
-.icono-resumen span{
-
-    font-size:100px;
-
-    color: #6A0DAD;
-
+.card-confirmacion{
+    background:#FFFFFF;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    border:1px solid #E6ECF2;
 }
 
-.detalle-turno {
-    margin: 20px auto;       /* Cambiamos el margin original para que use 'auto' a los costados y centre */
-    padding: 15px;
-    background: white;
-    border: 1px solid black;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    width: 100%;
-    max-width: 550px;        /* Mismo ancho para mantener la simetría */
+.card-confirmacion h2{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#2B3A4A;
+}
+
+.card-confirmacion hr{
+    border:none;
+    border-top:1px solid #E6ECF2;
+    margin:15px 0;
+}
+
+
+.fila-resumen{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:12px 0;
+}
+
+.fila-resumen span{
+    font-size:28px;
+    color:#4A90E2;
+}
+
+.fila-resumen strong{
+    display:block;
+    font-size:14px;
+    color:#7A8A99;
+}
+
+.fila-resumen p{
+    font-size:18px;
+    font-weight:600;
+    color:#2F3A45;
+}
+
+/* ==========================
+   INFO EXTRA
+========================== */
+
+.info-confirmacion{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#EAF3FF;
+    padding:18px;
+    border-radius:14px;
+    margin-bottom:25px;
+    border-left:5px solid #4A90E2;
+}
+
+.info-confirmacion span{
+    font-size:28px;
+    color:#4A90E2;
+}
+
+.info-confirmacion p{
+    font-size:16px;
+    color:#35516B;
+}
+
+@media(max-width:600px){
+
+    .encabezado-confirmacion h1{
+        font-size:26px;
+    }
+
+    .btn-volver2,
+    .btn-secundario{
+        width:100%;
+        flex:none;
+    }
+}
+
+/*=================================================
+                DETALLE DEL TURNO
+=================================================*/
+
+.detalle-turno{
+
+    width:100%;
+
+    max-width:750px;
+
+    margin:25px auto;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:20px;
+
+    border:2px solid #E7ECEF;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
 }
 
 .dato-turno{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    gap: 15px;
+    padding:10px 0;
+    border-bottom:1px solid #EEF2F5;
+
+    gap:20px;
 
 }
 
 .icono{
 
-    font-size: 34px;
+    font-size:36px;
 
-    color: #2563eb;
-
-}
-
-.dato-turno span:last-child{
-
-    font-size: 18px;
+    color:#7DA7C7;
 
 }
 
-
-.icono-resumen2 span{
-
-    font-size:100px;
-
-    color:green;
-
+.dato-turno:last-child{
+    border-bottom:none;
 }
 
-.icono-resumen2{
-    text-align: center;
-    margin-top:30px;
+.detalle-turno{
+    transition:.3s;
 }
 
+.detalle-turno:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+/*=================================================
+                TEXTOS
+=================================================*/
 
 .textoResumen,
 .confirmado,
-.extra {
-    text-align: center;
-    width: 100%;
-    max-width: 550px;
-    margin-left: auto;       /* El combo left: auto y right: auto centra textos con max-width */
-    margin-right: auto;
-}
+.extra{
 
-.confirmado {
-    color: #6A0DAD;
-    margin-bottom: 5px;
-    margin-top: 15px;        /* Le damos un poco de aire arriba */
-}
+    width:100%;
 
-.extra {
-    margin-bottom: 20px;     /* Despega el texto del botón o sección siguiente */
-}
+    max-width:700px;
 
-.navegacion2 {
+    margin:auto;
 
-    margin-top: auto;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 20px;
-
-    border-top: 1px solid #ddd;
+    text-align:center;
 
 }
 
-.btn-volver2{
+.textoResumen{
 
-    display: flex;
+    font-size:22px;
 
-    align-items: center;
-
-    gap: 6px;
-
-    padding: 10px 18px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background: #6A0DAD;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 20px;
+    color:#555;
 
 }
 
-/*footer*/
-footer{
-    background:#333333;
-    color:white;
+.confirmado{
 
-    margin-top:10px;
-    padding:40px;
+    font-size:34px;
+
+    color:#5E8AA8;
+
+    margin:20px auto 10px;
+
+}
+
+.extra{
+
+    font-size:20px;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+/*=================================================
+                NAVEGACIÓN
+=================================================*/
+
+.navegacion{
+
+    margin-top:auto;
 
     display:flex;
-    justify-content:space-around;
 
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 40px;
+
+    border-top:1px solid #E5E7EB;
+
+    background:#FCFCFC;
+
+}
+
+.navegacion2{
+
+    margin-top:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+    border-top:1px solid #E5E7EB;
+
+}
+
+/*=================================================
+                    BOTONES
+=================================================*/
+
+.btn-volver,
+.btn-siguiente,
+.btn-volver2, .btn-secundario{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:200px;
+
+    padding:18px 30px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#8CB8D6;
+
+    color:white;
+
+    font-size:21px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-volver:hover,
+.btn-volver2:hover{
+
+    background:#6F9DBE;
+
+}
+
+.btn-siguiente{
+    background:#5E8AA8;
+}
+
+.btn-siguiente:hover{
+    background:#45627C;
+}
+
+.btn-siguiente:disabled{
+
+    background:#D6DEE4;
+
+    color:#888;
+
+    cursor:not-allowed;
+
+}
+
+/* Botón secundario */
+.btn-secundario{
+    background:#FFFFFF;
+    color:#4A90E2;
+    border:2px solid #4A90E2;
+}
+
+.btn-secundario:hover{
+    background:#4A90E2;
+    color:white;
+}
+
+
+.navegacion2{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
     flex-wrap:wrap;
 }
 
-footer h3{
-    margin-bottom:20px;
-    color:#FFFFFF;
-}
 
-footer p{
-    margin-bottom:10px;
-}
 
-footer hr{
-    width:100%;
-    margin:30px 0;
-}
 
-footer>p{
-    width:100%;
-    text-align:center;
+/*=================================================
+                RESPONSIVE
+=================================================*/
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:20px;
+
+    }
+
+    .tarjeta-medico{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .rating-medico{
+
+        justify-content:center;
+
+    }
+
+    .dato-turno{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .navegacion{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .btn-volver,
+    .btn-siguiente,
+    .btn-volver2{
+
+        width:100%;
+
+    }
+
 }

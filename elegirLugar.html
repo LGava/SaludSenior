@@ -10,147 +10,257 @@
     <title>Elegir Lugar</title>
 
     <link rel="stylesheet" href="css/elegirLugar.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 
 <body>
+    <header class="header">
 
-    <main class="contenedor-principal">
-
-        <header>
+        <div class="header-top">
 
             <div class="logo">
-                <h2>🩺 Salud Senior</h2>
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
             </div>
-
-            <nav>
-                <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="misDatos.html">Mis datos</a></li>
-                    <li><a href="ayuda.html">Ayuda</a></li>
-                </ul>
-            </nav>
 
             <div class="usuario">
-                <p>Hola, Maria</p>
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
             </div>
 
-        </header>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
+
+    </header>
+        
+    <main class="contenedor-principal">
 
         <section class="encabezado">
 
-            <h1>Elegir Lugar</h1>
+            <span class="material-symbols-rounded icono-titulo">
+                location_on
+            </span>
+
+            <h1>Elegir lugar de atención</h1>
+
+            <p>
+                Seleccione el centro médico donde desea realizar su consulta.
+            </p>
 
         </section>
-
-        <div class="mapa">
-            <img src="img/mapa.png" alt="Mapa">
-        </div>
-
 
         <section class="busqueda">
 
-            <input type="text" placeholder="Buscar Zona">
+            <span class="material-symbols-rounded buscar-icono">
+                search
+            </span>
+
+            <input type="text"
+                id="buscarLugar"
+                placeholder="Buscar por zona o centro médico">
 
         </section>
 
+        <section class="mapa">
+
+            <img src="img/mapa.png" alt="Mapa de centros médicos">
+
+        </section>
+
+        <section class="info">
+
+            <span class="material-symbols-rounded">
+                local_hospital
+            </span>
+
+            <div>
+
+                <h2>Centros disponibles</h2>
+
+                <p>
+                    Seleccione el lugar más cercano a su domicilio.
+                </p>
+
+            </div>
+
+        </section>
 
         <section class="especialidades">
 
             <button class="especialidad">
 
-                <span class="texto">
-
-                    Avellaneda
-
+                <span class="material-symbols-rounded">
+                    location_on
                 </span>
 
-                <span class="material-symbols-outlined">
+                <div class="datos">
 
-                    <input type="radio" name="zona" value="banfield" class="botonRadio">
+                    <span class="texto">
+                        Hospital Avellaneda
+                    </span>
 
-                </span>
+                    <small>Av. Mitre 2450</small>
 
-            </button>
+                </div>
 
-            <button class="especialidad">
-
-
-
-                <span class="texto">
-
-                    Banfield
-
-                </span>
-
-                <input type="radio" name="zona" value="banfield" class="botonRadio">
-
-            </button>
-
-            <button class="especialidad">
-
-
-
-                <span class="texto">
-
-                    Lanus
-
-                </span>
-
-                <span class="material-symbols-outlined">
-
-                    <input type="radio" name="zona" value="banfield" class="botonRadio">
-
+                <span class="material-symbols-rounded">
+                    chevron_right
                 </span>
 
             </button>
 
             <button class="especialidad">
 
-
-
-                <span class="texto">
-
-                    Palermo
-
+                <span class="material-symbols-rounded">
+                    location_on
                 </span>
 
-                <span class="material-symbols-outlined">
+                <div class="datos">
 
-                    <input type="radio" name="zona" value="banfield" class="botonRadio">
+                    <span class="texto">
+                        Clínica Banfield
+                    </span>
 
+                    <small>Maipú 183</small>
+
+                </div>
+
+                <span class="material-symbols-rounded">
+                    chevron_right
                 </span>
 
             </button>
 
             <button class="especialidad">
 
-                <span class="texto">
-
-                    Belgrano
-
+                <span class="material-symbols-rounded">
+                    location_on
                 </span>
 
-                <span class="material-symbols-outlined">
+                <div class="datos">
 
-                    <input type="radio" name="zona" value="banfield" class="botonRadio">
+                    <span class="texto">
+                        Hospital Lanús
+                    </span>
 
+                    <small>Hipólito Yrigoyen 5100</small>
+
+                </div>
+
+                <span class="material-symbols-rounded">
+                    chevron_right
+                </span>
+
+            </button>
+
+            <button class="especialidad">
+
+                <span class="material-symbols-rounded">
+                    location_on
+                </span>
+
+                <div class="datos">
+
+                    <span class="texto">
+                        Centro Médico Palermo
+                    </span>
+
+                    <small>Av. Santa Fe 3450</small>
+
+                </div>
+
+                <span class="material-symbols-rounded">
+                    chevron_right
+                </span>
+
+            </button>
+
+            <button class="especialidad">
+
+                <span class="material-symbols-rounded">
+                    location_on
+                </span>
+
+                <div class="datos">
+
+                    <span class="texto">
+                        Clínica Belgrano
+                    </span>
+
+                    <small>Av. Cabildo 1870</small>
+
+                </div>
+
+                <span class="material-symbols-rounded">
+                    chevron_right
+                </span>
+
+            </button>
+
+            <button class="especialidad">
+
+                <span class="material-symbols-rounded">
+                    location_on
+                </span>
+
+                <div class="datos">
+
+                    <span class="texto">
+                        Hospital Quilmes
+                    </span>
+
+                    <small>12 de Octubre 420</small>
+
+                </div>
+
+                <span class="material-symbols-rounded">
+                    chevron_right
                 </span>
 
             </button>
 
         </section>
 
+        <section class="ayuda-eleccion">
+
+            <span class="material-symbols-rounded">
+                info
+            </span>
+
+            <div>
+
+                <h3>¿No encuentra una sede?</h3>
+
+                <p>
+                    Puede continuar y luego cambiar el lugar antes de confirmar el turno.
+                </p>
+
+            </div>
+
+        </section>
 
         <section class="navegacion">
 
-            <button class="btn-volver" data-anterior="especialidad.html">
+            <button class="btn-volver"
+                    data-anterior="especialidad.html">
 
-                <span class="material-symbols-outlined">
-
+                <span class="material-symbols-rounded">
                     arrow_back
-
                 </span>
 
                 Volver
@@ -158,47 +268,50 @@
             </button>
 
             <span class="paso">
-
-                2 de 5
-
+                Paso 2 de 5
             </span>
 
             <button class="btn-siguiente" disabled data-siguiente="elegirMedico.html">
                 Siguiente
 
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-rounded">
                     arrow_forward
                 </span>
-
-
 
             </button>
 
         </section>
 
-        <footer>
-            <div>
-                <h3>Contacto</h3>
-                <p>0800-123-456</p>
-                <p>saludsenior@gmail.com</p>
-            </div>
-
-            <div>
-                <h3>Horario</h3>
-                <p>Lunes a viernes</p>
-                <p>08:00 a 18:00</p>
-            </div>
-
-            <div>
-                <button id="cerrarSesion">
-                    Cerrar sesion
-                </button>
-            </div>
-        </footer>
-
     </main>
-    <script src="js/navegacion.js"></script>
-    <script src="js/agendarTurno.js"></script>
+
+    <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
+    </footer>
+
+<script src="js/navegacion.js"></script>
+<script src="js/elegirLugar.js"></script>
 
 </body>
 

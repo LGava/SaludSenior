@@ -1,29 +1,59 @@
+//========================
+// BUSCADOR
+//========================
 
-document.getElementById("buscarBtn").onclick=function(){
+const botonBuscar = document.getElementById("buscarBtn");
 
-    let texto=document.getElementById("buscar").value;
+botonBuscar.addEventListener("click", function () {
 
-    if(texto==""){
+    const texto = document.getElementById("buscar").value.trim();
+
+    if (texto === "") {
+
         alert("Mostrando todo el historial.");
-    }else{
-        alert("Buscando: "+texto);
+
+    } else {
+
+        alert("Buscando: " + texto);
+
     }
-}
 
-let botones=document.querySelectorAll(".consulta button");
+});
 
+//========================
+// VER DETALLE
+//========================
 
-for(let i=0;i<botones.length;i++){
+document.querySelectorAll(".consulta button").forEach(function (boton) {
 
-    botones[i].onclick=function(){
-        alert("Aquí se mostrarán los detalles de la consulta.");
-    }       
-}
+    boton.addEventListener("click", function () {
 
-document.querySelector(".descargar").onclick=function(){    
-    alert("Historial descargado correctamente.");
-}
+        const consulta = this.closest(".consulta");
 
-document.querySelector(".volver").onclick=function(){
-    window.location="inicio.html";
-}
+        const especialidad = consulta.querySelector("h2").textContent.trim();
+
+        alert("Mostrando detalles de la consulta de " + especialidad + ".");
+
+    });
+
+});
+
+//========================
+// DESCARGAR
+//========================
+
+document.querySelector(".descargar").addEventListener("click", function () {
+
+    alert("El historial médico se descargó correctamente.");
+
+});
+
+//========================
+// VOLVER
+//========================
+
+document.querySelector(".volver").addEventListener("click", function () {
+
+    window.location.href = "inicio.html";
+
+});

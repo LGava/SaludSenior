@@ -10,48 +10,118 @@
     <title>AgendarTurno</title>
 
     <link rel="stylesheet" href="css/agendarTurno.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 
 <body>
+    <header class="header">
+
+        <div class="header-top">
+
+            <div class="logo">
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
+            </div>
+
+            <div class="usuario">
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
+            </div>
+
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
+
+    </header>
 
     <main class="contenedor-principal">
 
-        <header>
-
-            <div class="logo">
-                <h2>🩺 Salud Senior</h2>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="misDatos.html">Mis datos</a></li>
-                    <li><a href="ayuda.html">Ayuda</a></li>
-                </ul>
-            </nav>
-
-            <div class="usuario">
-                <p>Hola, Maria</p>
-            </div>
-
-        </header>
-
+        <!-- ENCABEZADO -->
         <section class="encabezado">
 
-            <h1>Agendar turno</h1>
+            <div class="textoEncabezado">
+
+                <h1>Agendar turno</h1>
+
+                <p>
+                    Reserve su consulta médica en solo unos pasos. Seleccione una especialidad para comenzar.
+                </p>
+
+            </div>
+
+            <div class="imagenEncabezado">
+
+                <img src="img/atender.png" alt="Agendar turno">
+
+            </div>
 
         </section>
 
+        <!-- BARRA DE PROGRESO -->
+        <section class="progreso">
 
+            <div class="barra">
+
+                <div class="avance"></div>
+
+            </div>
+
+            <p>Paso 1 de 5 • Seleccionar especialidad</p>
+
+        </section>
+
+        <!-- BUSCADOR -->
         <section class="busqueda">
 
-            <input type="text" placeholder="Buscar especialidad">
+            <span class="material-symbols-rounded">
+                search
+            </span>
+
+            <input
+                type="text"
+                id="buscarEspecialidad"
+                placeholder="Buscar especialidad">
 
         </section>
 
+        <!-- INFORMACIÓN -->
+        <section class="informacion">
 
+            <div class="info">
+
+                <span class="material-symbols-rounded">
+                    medical_information
+                </span>
+
+                <div>
+
+                    <h3>Especialidades disponibles</h3>
+
+                    <p>
+                        Seleccione la especialidad médica que necesita.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ESPECIALIDADES -->
         <section class="especialidades">
 
             <button class="especialidad">
@@ -61,15 +131,11 @@
                 </span>
 
                 <span class="texto">
-
                     Traumatología
-
                 </span>
 
                 <span class="material-symbols-outlined">
-
                     chevron_right
-
                 </span>
 
             </button>
@@ -81,15 +147,11 @@
                 </span>
 
                 <span class="texto">
-
                     Cardiología
-
                 </span>
 
                 <span class="material-symbols-outlined">
-
                     chevron_right
-
                 </span>
 
             </button>
@@ -101,15 +163,11 @@
                 </span>
 
                 <span class="texto">
-
-                    Pediatria
-
+                    Pediatría
                 </span>
 
                 <span class="material-symbols-outlined">
-
                     chevron_right
-
                 </span>
 
             </button>
@@ -121,15 +179,11 @@
                 </span>
 
                 <span class="texto">
-
-                    Ginecologia
-
+                    Ginecología
                 </span>
 
                 <span class="material-symbols-outlined">
-
                     chevron_right
-
                 </span>
 
             </button>
@@ -141,15 +195,11 @@
                 </span>
 
                 <span class="texto">
-
-                    Dermatologia
-
+                    Dermatología
                 </span>
 
                 <span class="material-symbols-outlined">
-
                     chevron_right
-
                 </span>
 
             </button>
@@ -161,13 +211,10 @@
                 </span>
 
                 <span class="texto">
-
-                    Odontologia
-
+                    Odontología
                 </span>
 
                 <span class="material-symbols-outlined">
-
                     chevron_right
                 </span>
 
@@ -180,15 +227,11 @@
                 </span>
 
                 <span class="texto">
-
-                    Nutricionista
-
+                    Nutrición
                 </span>
 
                 <span class="material-symbols-outlined">
-
                     chevron_right
-
                 </span>
 
             </button>
@@ -196,37 +239,94 @@
             <button class="especialidad">
 
                 <span class="material-symbols-outlined">
-                    orthopedics
+                    accessibility_new
                 </span>
 
                 <span class="texto">
-
-                    Kinesiologia
-
+                    Kinesiología
                 </span>
 
                 <span class="material-symbols-outlined">
-
                     chevron_right
-
                 </span>
 
             </button>
 
+        </section>
 
+        <!-- AYUDA -->
+        <section class="ayudaTurno">
 
+            <div class="ayudaCard">
+
+                <span class="material-symbols-rounded">
+                    info
+                </span>
+
+                <div>
+
+                    <h3>¿No sabe qué especialidad elegir?</h3>
+
+                    <p>
+                        Comuníquese con nuestro equipo de orientación médica y lo ayudaremos a seleccionar el profesional adecuado.
+                    </p>
+
+                </div>
+
+            </div>
 
         </section>
 
+        <!-- HEURÍSTICAS / INFORMACIÓN -->
+        <section class="ventajas">
 
+            <div class="ventaja">
+
+                <span class="material-symbols-rounded">
+                    check_circle
+                </span>
+
+                <p>
+                    Proceso simple y guiado paso a paso.
+                </p>
+
+            </div>
+
+            <div class="ventaja">
+
+                <span class="material-symbols-rounded">
+                    visibility
+                </span>
+
+                <p>
+                    Toda la información permanece visible durante el proceso.
+                </p>
+
+            </div>
+
+            <div class="ventaja">
+
+                <span class="material-symbols-rounded">
+                    verified_user
+                </span>
+
+                <p>
+                    Sus datos están protegidos y son confidenciales.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- NAVEGACIÓN -->
         <section class="navegacion">
 
-            <button class="btn-volver" disabled data-anterior="">
+            <button
+                class="btn-volver"
+                data-anterior="inicio.html">
 
                 <span class="material-symbols-outlined">
-
                     arrow_back
-
                 </span>
 
                 Volver
@@ -234,45 +334,48 @@
             </button>
 
             <span class="paso">
-
-                1 de 5
-
+                Paso 1 de 5
             </span>
 
-            <button class="btn-siguiente" disabled data-siguiente="elegirLugar.html">
-                Siguiente
+        <button
+            class="btn-siguiente"
+            disabled
+            data-siguiente="elegirLugar.html">
 
-                <span class="material-symbols-outlined">
-                    arrow_forward
-                </span>
+            Siguiente
+            <span class="material-symbols-outlined">arrow_forward</span>
 
-
-
-            </button>
+        </button>
 
         </section>
 
-        <footer>
+    </main>
+
+    <footer class="footer">
+
         <div>
             <h3>Contacto</h3>
-            <p>0800-123-456</p>
-            <p>saludsenior@gmail.com</p>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
         </div>
 
         <div>
-            <h3>Horario</h3>
-            <p>Lunes a viernes</p>
-            <p>08:00 a 18:00</p>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
         </div>
 
         <div>
-            <button id="cerrarSesion">
-                Cerrar sesion
-            </button>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
         </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
     </footer>
-
-    </main>
 
     <script src="js/navegacion.js"></script>
     <script src="js/agendarTurno.js"></script>

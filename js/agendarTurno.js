@@ -1,21 +1,38 @@
+const listaEspecialidades = document.querySelectorAll(".especialidad");
+const btnSiguienteEspecialidad = document.querySelector(".btn-siguiente");
 
+let especialidadSeleccionada = false;
 
-let especialidades = document.querySelectorAll(".especialidad");
+listaEspecialidades.forEach(function(especialidad){
 
-especialidades.forEach((especialidad) => {
+    especialidad.addEventListener("click",function(){
 
-    especialidad.addEventListener("click", () => {
-
-        especialidades.forEach((e) => {
-
-            e.classList.remove("especialidad-seleccionada");
-
+        listaEspecialidades.forEach(e=>{
+            e.classList.remove("seleccionada");
         });
 
-        especialidad.classList.add("especialidad-seleccionada");
-        botonSiguiente.disabled = false;
+        this.classList.add("seleccionada");
+
+        const nombre=this.querySelector(".texto").textContent.trim();
+
+        sessionStorage.setItem("especialidad",nombre);
+
+        btnSiguienteEspecialidad.disabled=false;
 
     });
 
 });
 
+botonSiguiente.addEventListener("click", function () {
+
+    if (!especialidadSeleccionada) {
+
+        alert("Seleccione una especialidad.");
+
+        return;
+
+    }
+
+    window.location.href = "elegirLugar.html";
+
+});

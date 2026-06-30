@@ -7,65 +7,55 @@
 
     <title>Salud Senior</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-    <header>
+<body>
+    <header class="header">
 
         <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+            <span class="material-symbols-rounded icono">medical_services</span>
+            <h2>Salud Senior</h2>
         </div>
 
-        <nav>
+        <nav class="nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Agendar Turno</a></li>
-                <li><a href="#">Mis Datos</a></li>
-                <li><a href="#">Turnos</a></li>
-                <li><a href="ayuda.html">¿Necesita ayuda?</a></li>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="registro.html"><span class="icono material-symbols-rounded">person</span>Registrarse</a></li>
+                <li><a href="login.html"><span class="icono material-symbols-rounded">person</span>Iniciar sesion</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
             </ul>
         </nav>
 
-        <div class="usuario"> 👤 </div>
+        <div class="usuario">
+            <span class="material-symbols-rounded icono">account_circle</span>
+        </div>
 
     </header>
-    <!-- ============== BARRA ACCESIBILIDAD ============== -->
-    <section class="accesibilidad">
-
-        <button id="aumentar">
-            A+
-        </button>
-
-        <button id="disminuir">
-            A-
-        </button>
-
-        <button id="contraste">
-            Alto Contraste
-        </button>
-
-    </section>
 
     <!-- =================== MAIN =================== -->
-    <main>
+    <main class="main">
+
+        <!-- HERO PRINCIPAL -->
         <section class="principal">
+
             <div class="textoPrincipal">
 
                 <h1>
-                    Tu salud, mas cerca y sin complicaciones.
+                    Tu salud, más cerca y sin complicaciones
                 </h1>
 
                 <p>
-                    Reserve, consulte y modifique sus turnos medicos de forma
-                    sencilla, rapida y segura.
+                    Reserve, consulte y modifique sus turnos médicos de forma sencilla, rápida y segura.
                 </p>
 
                 <div class="botones">
 
                     <button id="btnLogin">
-                        Iniciar Sesion
+                        Iniciar sesión
                     </button>
 
                     <button id="btnRegistro">
@@ -77,52 +67,76 @@
                 <div class="enlaces">
 
                     <a href="recuperar.html">
-                        ¿Olvido su contraseña?
+                        ¿Olvidó su contraseña?
                     </a>
 
                 </div>
+
             </div>
 
             <div class="imagenPrincipal">
 
-                <img src="" alt="Doctora">
+                <img src="img/doctor1.png" alt="Profesional de salud">
 
             </div>
 
         </section>
 
-        <!-- Caracteristicas -->
+        <!-- ================= POR QUÉ ELEGIR ================= -->
         <section class="beneficios">
 
-            <h2>
-                ¿Por que elegir Salud Senior?
-            </h2>
+            <h2>¿Por qué elegir Salud Senior?</h2>
+
+            <p class="subtitulo">
+                Pensado especialmente para facilitar la atención médica a personas mayores.
+            </p>
 
             <div class="tarjetas">
 
                 <article class="tarjeta">
 
-                    <h3>👨‍⚕️ Profesionales calificados</h3>
+                    <span class="material-symbols-rounded">health_and_safety</span>
+
+                    <h3>Seguridad médica</h3>
+
                     <p>
-                        Medicos con experiencia para brindar una atencion segura.
+                        Sus datos y turnos están protegidos en todo momento.
                     </p>
 
                 </article>
 
                 <article class="tarjeta">
 
-                    <h3>📅 Turnos sencillos</h3>
+                    <span class="material-symbols-rounded">touch_app</span>
+
+                    <h3>Fácil de usar</h3>
+
                     <p>
-                        Agende o modifique sus turnos paso a paso.
+                        Interfaz simple, clara y adaptada para adultos mayores.
                     </p>
 
                 </article>
 
                 <article class="tarjeta">
 
-                    <h3> 📍 Centros cercanos </h3>
+                    <span class="material-symbols-rounded">schedule</span>
+
+                    <h3>Sin esperas</h3>
+
                     <p>
-                        Encuentre hospitales y clinicas cerca de usted.
+                        Reserve turnos en minutos sin filas ni trámites.
+                    </p>
+
+                </article>
+
+                <article class="tarjeta">
+
+                    <span class="material-symbols-rounded">support_agent</span>
+
+                    <h3>Atención de ayuda</h3>
+
+                    <p>
+                        Soporte disponible si necesita asistencia.
                     </p>
 
                 </article>
@@ -131,128 +145,186 @@
 
         </section>
 
-        <!-- Opiniones -->
+        <!-- ================= OPINIONES ================= -->
         <section class="opiniones">
 
-            <h2>
-                Opiniones de nuestros pacientes
-            </h2>
+            <h2>Opiniones de nuestros pacientes</h2>
 
-            <div class="tarjetas">
+            <div class="carousel">
 
-                <article class="tarjeta">
+                <div class="carousel-track" id="carouselTrack">
 
-                    ⭐⭐⭐⭐⭐
-                    <p>
-                        "Muy facil de utilizar."
-                    </p>
+                    <article class="tarjeta">
 
-                </article>
+                        <div class="estrellas">
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                        </div>
 
-                <article class="tarjeta">
+                        <p>“Muy fácil de usar, pude sacar turno sin ayuda.”</p>
+                        <h4>Marta, 67 años</h4>
 
-                    ⭐⭐⭐⭐⭐
-                    <p>
-                        "Pude sacar mi turno en pocos minutos."
-                    </p>
+                    </article>
 
-                </article>
+                    <article class="tarjeta">
 
-                <article class="tarjeta">
+                        <div class="estrellas">
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                        </div>
 
-                    ⭐⭐⭐⭐⭐
-                    <p>
-                        "Excelente atencion."
-                    </p>
+                        <p>“Ahora no tengo que hacer filas, todo es rápido.”</p>
+                        <h4>Carlos, 72 años</h4>
 
-                </article>
+                    </article>
+
+                    <article class="tarjeta">
+
+                        <div class="estrellas">
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                            <span class="material-symbols-rounded">star</span>
+                        </div>
+
+                        <p>“Muy claro y accesible para personas mayores.”</p>
+                        <h4>Elena, 70 años</h4>
+
+                    </article>
+
+                </div>
 
             </div>
+
         </section>
 
-        <!-- Estadisticas -->
-
+        <!-- ================= ESTADÍSTICAS ================= -->
         <section class="estadisticas">
 
-            <h2>
-                Salud Senior en números
-            </h2>
+            <h2>Salud Senior en números</h2>
 
             <div class="numeros">
 
-                <div>
-                    <h3>+350</h3>
-                    <p>Medicos</p>
+                <div class="stat">
+                    <span class="material-symbols-rounded">person</span>
+                    <h3 data-count="350">0</h3>
+                    <p>Médicos</p>
                 </div>
 
-                <div>
-                    <h3>+12.000</h3>
+                <div class="stat">
+                    <span class="material-symbols-rounded">event</span>
+                    <h3 data-count="12000">0</h3>
                     <p>Turnos</p>
                 </div>
 
-                <div>
-                    <h3>25</h3>
+                <div class="stat">
+                    <span class="material-symbols-rounded">local_hospital</span>
+                    <h3 data-count="25">0</h3>
                     <p>Especialidades</p>
                 </div>
 
-                <div>
-                    <h3>98%</h3>
-                    <p>Satisfaccion</p>
+                <div class="stat">
+                    <span class="material-symbols-rounded">thumb_up</span>
+                    <h3 data-count="98">0</h3>
+                    <p>Satisfacción %</p>
                 </div>
 
             </div>
+
+        </section>
+
+        <!-- ================= EXPERIENCIA VISUAL ================= -->
+        <section class="experiencia">
+
+            <h2>Su atención médica más simple</h2>
+
+            <p>
+                Todo lo que necesita está en un solo lugar, diseñado para ser claro y fácil de usar.
+            </p>
+
+            <div class="grid-experiencia">
+
+                <article class="card-experiencia">
+
+                    <img src="img/turnos.jpg" alt="Agenda de turnos">
+
+                    <h3>
+                        <span class="material-symbols-rounded">calendar_month</span>
+                        Turnos organizados
+                    </h3>
+
+                    <p>
+                        Vea, cambie o cancele sus turnos en segundos.
+                    </p>
+
+                </article>
+
+                <article class="card-experiencia">
+
+                    <img src="img/atender.png" alt="Médico atendiendo paciente">
+
+                    <h3>
+                        <span class="material-symbols-rounded">medical_services</span>
+                        Atención profesional
+                    </h3>
+
+                    <p>
+                        Médicos disponibles y especializados para usted.
+                    </p>
+
+                </article>
+
+                <article class="card-experiencia">
+
+                    <img src="img/mapaCentro.png" alt="Mapa de centros médicos">
+
+                    <h3>
+                        <span class="material-symbols-rounded">location_on</span>
+                        Centros cercanos
+                    </h3>
+
+                    <p>
+                        Encuentre clínicas cerca de su ubicación fácilmente.
+                    </p>
+
+                </article>
+
+            </div>
+
         </section>
     </main>
 
     <!-- ================= FOOTER ================= -->
-    <footer>
+    <footer class="footer">
+
         <div>
-            <h3>
-                Contacto
-            </h3>
-
-            <p>
-                📞 0800-123-456
-            </p>
-
-            <p>
-                ✉ saludsenior@gmail.com
-            </p>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
         </div>
 
         <div>
-            <h3>
-                Horarios
-            </h3>
-
-            <p>
-                Lunes a Viernes
-            </p>
-
-            <p>
-                8:00 a 18:00
-            </p>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
         </div>
 
         <div>
-            <h3>
-                Informacion
-            </h3>
-
-            <p>
-                Politica de Privacidad
-            </p>
-
-            <p>
-                Terminos y Condiciones
-            </p>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
         </div>
 
         <hr>
 
-        <p>
-            © 2026 Salud Senior - Todos los derechos reservados.
-        </p>
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
 
     </footer>
 

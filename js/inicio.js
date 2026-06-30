@@ -1,6 +1,7 @@
 
 document.getElementById("agendar").onclick=function(){
 
+    sessionStorage.setItem("proceso", "agendar");
     window.location="especialidad.html";
 };
 

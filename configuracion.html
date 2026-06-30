@@ -8,24 +8,42 @@
     <title>Configuracion | Salud Senior</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
+
 
 <body>
 
-    <header>
+    <header class="header">
 
-        <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+        <div class="header-top">
+
+            <div class="logo">
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
+            </div>
+
+            <div class="usuario">
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
+            </div>
+
         </div>
 
-        <nav>
+        <nav class="nav">
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="misDatos.html">Mis Datos</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">history</span>Mis turnos</a></li>
+                <li><a href="notificaciones.html"><span class="icono material-symbols-rounded">notifications</span>Notificaciones</a></li>
+                <li><a href="misDatos.html"><span class="icono material-symbols-rounded">person</span>Mis datos</a></li>
             </ul>
         </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
 
     </header>
 
@@ -33,30 +51,54 @@
 
         <section class="configuracion">
 
-            <h1>⚙ Configuracion</h1>
+            <h1>
+                <span class="material-symbols-rounded">settings</span>
+                Configuración
+            </h1>
+
             <p>
-                Personalice la aplicacion para que sea mas comoda de utilizar.
+                Personalice la aplicación para que sea más cómoda y fácil de utilizar.
             </p>
 
+            <!-- TAMAÑO DE TEXTO -->
             <div class="opcionConfiguracion">
 
-                <h2>Tamaño del texto</h2>
-                <p>
-                    Seleccione el tamaño de letra que le resulte mas comodo.
-                </p>
+                <div class="tituloConfiguracion">
 
-                <button id="disminuir">A-</button>
-                <button id="normal">Normal</button>
-                <button id="aumentar">A+</button>
+                    <span class="material-symbols-rounded">format_size</span>
+
+                    <div>
+                        <h2>Tamaño del texto</h2>
+                        <p>Seleccione el tamaño de letra que le resulte más cómodo.</p>
+                    </div>
+
+                </div>
+
+                <div class="botonesTexto">
+
+                    <button id="disminuir">A-</button>
+
+                    <button id="normal">Normal</button>
+
+                    <button id="aumentar">A+</button>
+
+                </div>
 
             </div>
 
+            <!-- CONTRASTE -->
             <div class="opcionConfiguracion">
 
-                <h2>Contraste</h2>
-                <p>
-                    Mejore la visibilidad aumentando el contraste.
-                </p>
+                <div class="tituloConfiguracion">
+
+                    <span class="material-symbols-rounded">contrast</span>
+
+                    <div>
+                        <h2>Alto contraste</h2>
+                        <p>Mejore la visibilidad utilizando colores de mayor contraste.</p>
+                    </div>
+
+                </div>
 
                 <button id="contraste">
                     Activar / Desactivar
@@ -64,61 +106,129 @@
 
             </div>
 
+            <!-- SONIDOS -->
             <div class="opcionConfiguracion">
 
-                <h2>Sonidos</h2>
-                <p>
-                    Escuchar un sonido cuando se confirme una accion.
-                </p>
+                <div class="tituloConfiguracion">
+
+                    <span class="material-symbols-rounded">volume_up</span>
+
+                    <div>
+                        <h2>Sonidos</h2>
+                        <p>Escuchar un sonido cuando se confirme una acción.</p>
+                    </div>
+
+                </div>
 
                 <label class="switch">
+
                     <input type="checkbox" id="sonidos">
+
                     <span class="slider"></span>
+
                 </label>
 
             </div>
 
+            <!-- RECORDATORIOS -->
             <div class="opcionConfiguracion">
 
-                <h2>Recordatorios</h2>
-                <p>
-                    Recibir recordatorios antes del turno.
-                </p>
+                <div class="tituloConfiguracion">
+
+                    <span class="material-symbols-rounded">notifications</span>
+
+                    <div>
+                        <h2>Recordatorios</h2>
+                        <p>Recibir recordatorios antes de cada turno médico.</p>
+                    </div>
+
+                </div>
 
                 <label class="switch">
+
                     <input type="checkbox" checked>
+
                     <span class="slider"></span>
+
                 </label>
 
             </div>
 
+            <!-- IDIOMA -->
             <div class="opcionConfiguracion">
 
-                <h2>Idioma</h2>
+                <div class="tituloConfiguracion">
+
+                    <span class="material-symbols-rounded">language</span>
+
+                    <div>
+                        <h2>Idioma</h2>
+                        <p>Seleccione el idioma de la aplicación.</p>
+                    </div>
+
+                </div>
+
                 <select>
+
                     <option>Español</option>
+
                     <option>English</option>
-                    <option>Portugues</option>
+
+                    <option>Português</option>
+
                 </select>
 
             </div>
 
-            <button id="guardar">
-                Guardar cambios
-            </button>
+            <!-- BOTONES -->
+            <div class="accionesConfiguracion">
 
-            <button class="volver">
-                Volver
-            </button>
+                <button id="guardar">
+
+                    <span class="material-symbols-rounded">save</span>
+
+                    Guardar cambios
+
+                </button>
+
+                <button class="volver">
+
+                    <span class="material-symbols-rounded">arrow_back</span>
+
+                    Volver
+
+                </button>
+
+            </div>
 
         </section>
 
     </main>
 
-    <footer>
-        <p>
-            © 2026 Salud Senior
-        </p>
+    <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
     </footer>
 
     <script src="js/configuracion.js"></script>

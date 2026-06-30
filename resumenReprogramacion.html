@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resumen de Reprogramación</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-top">
+
+            <div class="logo">
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
+            </div>
+
+            <div class="usuario">
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
+            </div>
+
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
+                <li><a href="especialidad.html"><span class="icono material-symbols-rounded">stethoscope</span>Agendar turno</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
+
+    </header>
+    
+    <main class="contenedor-principal">
+
+        <section class="encabezado resumen-header">
+
+            <span class="material-symbols-rounded icono-titulo">
+                event_repeat
+            </span>
+
+            <h1>Resumen de la Reprogramación</h1>
+
+            <p>
+                Verifique los datos antes de confirmar el cambio de turno.
+            </p>
+
+        </section>
+
+        <section class="resumen">
+
+            <div class="dato">
+                <h3>Especialidad</h3>
+                <p>Traumatología</p>
+            </div>
+
+            <div class="dato">
+                <h3>Lugar</h3>
+                <p>Hospital Central</p>
+            </div>
+
+            <div class="dato">
+                <h3>Médico</h3>
+                <p>Dr. Stephen Strange</p>
+            </div>
+
+            <div class="dato">
+                <h3>Nueva fecha</h3>
+                <p>22 de Junio de 2026</p>
+            </div>
+
+            <div class="dato">
+                <h3>Nuevo horario</h3>
+                <p>11:00 hs</p>
+            </div>
+
+        </section>
+
+        <section class="mensaje">
+
+            <span class="material-symbols-rounded">
+                info
+            </span>
+
+            <p>
+                El turno anterior será reemplazado automáticamente al confirmar.
+            </p>
+
+        </section>
+
+        <section class="alerta-importante">
+
+            <span class="material-symbols-rounded">
+                warning
+            </span>
+
+            <div>
+                <h3>Importante</h3>
+                <p>
+                    Una vez confirmado, no podrá deshacer la reprogramación desde esta pantalla.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="navegacion">
+
+            <button class="btn-volver"
+                    onclick="location.href='elegirHorario.html'">
+
+                <span class="material-symbols-rounded">
+                    arrow_back
+                </span>
+
+                Volver
+
+            </button>
+
+            <span class="paso">
+                Paso 5 de 5
+            </span>
+
+            <button class="btn-siguiente confirmar"
+                    id="confirmar">
+
+                Confirmar turno
+
+                <span class="material-symbols-rounded">
+                    check_circle
+                </span>
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
+    </footer>
+
+<script src="js/navegacion.js"></script>
+<script src="js/reprogramar.js"></script>
+
+</body>
+
+</html>

@@ -8,23 +8,40 @@
     <title>Notificaciones | Salud Senior</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 
 <body>
+    <header class="header">
 
-    <header>
-        <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+        <div class="header-top">
+
+            <div class="logo">
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
+            </div>
+
+            <div class="usuario">
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
+            </div>
+
         </div>
 
-        <nav>
+        <nav class="nav">
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
-                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="configuracion.html"><span class="icono material-symbols-rounded">settings</span>Configuración</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">history</span>Mis turnos</a></li>
+                <li><a href="notificaciones.html"><span class="icono material-symbols-rounded">notifications</span>Notificaciones</a></li>
+                <li><a href="misDatos.html"><span class="icono material-symbols-rounded">person</span>Mis datos</a></li>
             </ul>
         </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
 
     </header>
 
@@ -32,20 +49,35 @@
 
         <section class="notificaciones">
 
-            <h1>🔔 Notificaciones</h1>
+            <h1>
+                <span class="material-symbols-rounded">notifications</span>
+                Notificaciones
+            </h1>
 
             <p>
-                Aqui encontrara los avisos importantes relacionados con sus turnos.
+                Aquí encontrará los avisos importantes relacionados con sus turnos y su cuenta.
             </p>
 
             <div class="barraNotificaciones">
 
-                <button id="todas">Todas</button>
-                <button id="leidas">Leidas</button>
-                <button id="noleidas">No leidas</button>
+                <button id="todas">
+                    <span class="material-symbols-rounded">list</span>
+                    Todas
+                </button>
+
+                <button id="leidas">
+                    <span class="material-symbols-rounded">mark_email_read</span>
+                    Leídas
+                </button>
+
+                <button id="noleidas">
+                    <span class="material-symbols-rounded">mark_email_unread</span>
+                    No leídas
+                </button>
 
                 <button id="marcar">
-                    Marcar todas como leidas
+                    <span class="material-symbols-rounded">done_all</span>
+                    Marcar todas como leídas
                 </button>
 
             </div>
@@ -54,60 +86,103 @@
 
                 <div class="notificacion nueva">
 
-                    <h2>📅 Recordatorio de turno</h2>
+                    <h2>
+                        <span class="material-symbols-rounded">event</span>
+                        Recordatorio de turno
+                    </h2>
+
                     <p>
-                        Tiene un turno de Traumatologia mañana a las 13:30 hs.
+                        Tiene un turno de Traumatología mañana a las 13:30 hs.
                     </p>
 
-                    <span class="estado">No leida</span>
+                    <span class="estado">No leída</span>
 
                 </div>
 
                 <div class="notificacion">
 
-                    <h2>✅ Turno confirmado</h2>
+                    <h2>
+                        <span class="material-symbols-rounded">verified</span>
+                        Turno confirmado
+                    </h2>
+
                     <p>
                         Su turno con el Dr. Stephen Strange fue confirmado.
                     </p>
 
-                    <span class="estado">Leida</span>
+                    <span class="estado">Leída</span>
 
                 </div>
 
                 <div class="notificacion nueva">
 
-                    <h2>🔄 Cambio de horario</h2>
+                    <h2>
+                        <span class="material-symbols-rounded">update</span>
+                        Cambio de horario
+                    </h2>
+
                     <p>
                         El horario de su consulta fue modificado.
                     </p>
 
-                    <span class="estado">No leida</span>
+                    <span class="estado">No leída</span>
 
                 </div>
 
                 <div class="notificacion">
 
-                    <h2>📢 Información</h2>
+                    <h2>
+                        <span class="material-symbols-rounded">info</span>
+                        Información
+                    </h2>
+
                     <p>
                         Ahora puede consultar nuevas especialidades médicas.
                     </p>
 
-                    <span class="estado">Leida</span>
+                    <span class="estado">Leída</span>
 
                 </div>
+
             </div>
 
-            <button class="volver">
-                Volver al inicio
-            </button>
+            <div class="accionesNotificaciones">
+
+                <button class="volver">
+                    <span class="material-symbols-rounded">arrow_back</span>
+                    Volver al inicio
+                </button>
+
+            </div>
 
         </section>
+
     </main>
 
-    <footer>
-        <p>
-            © 2026 Salud Senior
-        </p>
+    <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
     </footer>
 
     <script src="js/notificaciones.js"></script>

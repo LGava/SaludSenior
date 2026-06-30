@@ -5,83 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Datos | Salud Senior</title>
     <link rel="stylesheet" href="css/misDatos.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+    <header class="header">
+
+        <div class="header-top">
+
+            <div class="logo">
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
+            </div>
+
+            <div class="usuario">
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
+            </div>
+
         </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
+                <li><a href="especialidad.html"><span class="icono material-symbols-rounded">stethoscope</span>Agendar turno</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
+
     </header>
 
-    <main>
-        <div class="contenedor-datos">
-            
-            <div class="tarjeta-datos">
-                <h2>👤 Información Personal</h2>
-                <hr>
-                <form>
-                    <div class="campo-personalizado">
-                        <label>Nombre:</label>
-                        <input type="text" value="Maria" placeholder="Ingresa tu nombre">
-                    </div>
+<main>
 
-                    <div class="campo-personalizado">
-                        <label>Apellido:</label>
-                        <input type="text" value="Pérez" placeholder="Ingresa tu apellido">
-                    </div>
+    <div class="contenedor-datos">
 
-                    <div class="campo-personalizado">
-                        <label>DNI (No modificable):</label>
-                        <input type="text" value="42345678" readonly class="campo-bloqueado">
-                    </div>
+        <!-- INFORMACIÓN PERSONAL -->
+        <div class="tarjeta-datos">
 
-                    <div class="campo-personalizado">
-                        <label>Email (Opcional):</label>
-                        <input type="email" placeholder="nombre@correo.com">
-                    </div>
+            <h2>
+                <span class="material-symbols-rounded">person</span>
+                Información Personal
+            </h2>
 
-                    <button type="submit" class="boton-guardar-datos">Guardar Datos</button>
-                </form>
-            </div>
+            <hr>
 
-            <div class="tarjeta-datos">
-                <h2>📋 Mis Turnos</h2>
-                <hr>
+            <form id="formDatos">
 
-                <div class="lista-turnos-datos">
-                    
-                    <div class="turno-item">
-                        <div>
-                            <h3>Traumatologia</h3>
-                            <p class="detalle-datos">Dr. Stephen Strange (Traumatología)</p>
-                            <p class="fecha-datos">Jueves 16 de mayo </p>
-                            <p class="fecha-datos">13:30 hs</p>
-                        </div>
-                        <button class="botonVerDetalles">Ver detalles</button>
-                    </div>
+                <div class="campo-personalizado">
+                    <label>Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre">
                 </div>
 
-                <button class="volver" onclick="window.location.href='inicio.html'">Volver al Inicio</button>
+                <div class="campo-personalizado">
+                    <label>Apellido</label>
+                    <input type="text" id="apellido" placeholder="Ingrese su apellido">
+                </div>
+
+                <div class="campo-personalizado">
+                    <label>DNI</label>
+                    <input type="text" id="dni" readonly class="campo-bloqueado">
+                </div>
+
+                <div class="campo-personalizado">
+                    <label>Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="correo@gmail.com">
+                </div>
+
+                <button class="boton-guardar-datos">
+                    <span class="material-symbols-rounded">save</span>
+                    Guardar cambios
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ILUSTRACIÓN -->
+        <div class="tarjeta-ilustracion">
+
+            <img src="img/datosMedicos.png" alt="Paciente">
+
+            <h3>Sus datos están protegidos</h3>
+
+            <p>
+                Mantenga su información actualizada para agilizar la atención médica y la reserva de turnos.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- TURNOS -->
+
+    <section class="tarjeta-datos turnos">
+
+        <h2>
+            <span class="material-symbols-rounded">event</span>
+            Mis próximos turnos
+        </h2>
+
+        <hr>
+
+        <div class="lista-turnos-datos">
+
+            <div class="turno-item">
+
+                <div>
+
+                    <h3>Traumatología</h3>
+
+                    <p class="detalle-datos">
+                        Dr. Stephen Strange
+                    </p>
+
+                    <p class="fecha-datos">
+                        16 de mayo - 13:30 hs
+                    </p>
+
+                </div>
+
+                <button class="botonVerDetalles">
+                    Ver detalles
+                </button>
+
             </div>
 
         </div>
-    </main>
 
-    <footer>
+        <button class="volver">
+            Volver al inicio
+        </button>
+
+    </section>
+
+</main>
+
+    <footer class="footer">
+
         <div>
             <h3>Contacto</h3>
-            <p>0800-123-456</p>
-            <p>saludsenior@gmail.com</p>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
         </div>
+
         <div>
-            <h3>Horario</h3>
-            <p>Lunes a viernes</p>
-            <p>08:00 a 18:00</p>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
         </div>
+
         <div>
-            <button id="cerrarSesion">Cerrar sesion</button>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
         </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
     </footer>
 
 </body>

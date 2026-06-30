@@ -8,163 +8,175 @@
     <title>Ayuda | Salud Senior</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+    <div class="header-top">
 
         <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+            <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+            <h2>Salud Senior</h2>
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="configuracion.html">Configuracion</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="notificaciones.html">Notificaciones</a></li>
-            </ul>
-        </nav>
+        <div class="usuario">
+            <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
+        </div>
 
-    </header>
+    </div>
 
-    <main>
+    <nav class="nav">
+        <ul>
+            <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+            <li><a href="configuracion.html"><span class="icono material-symbols-rounded">settings</span>Configuración</a></li>
+            <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">history</span>Mis turnos</a></li>
+            <li><a href="notificaciones.html"><span class="icono material-symbols-rounded">notifications</span>Notificaciones</a></li>
+            <li><a href="misDatos.html"><span class="icono material-symbols-rounded">person</span>Mis datos</a></li>
+        </ul>
+    </nav>
 
-        <section class="ayuda">
+    <div class="accesibilidad-header">
+        <button id="aumentar">A+</button>
+        <button id="disminuir">A-</button>
+        <button id="contraste">Alto contraste</button>
+    </div>
 
-            <h1>¿Necesita ayuda?</h1>
-            <p>
-                Estamos para acompañarlo. Elija una opcion.
-            </p>
+</header>
 
-            <div class="tarjetasAyuda">
+<!-- ================= MAIN ================= -->
+<main class="ayuda-container">
 
-                <div class="cardAyuda">
+    <!-- HERO -->
+    <section class="ayuda-hero">
+        <span class="material-symbols-rounded hero-icon">help</span>
 
-                    <h2>📞 Contacto</h2>
-                    <p>
-                        Llamenos si necesita asistencia.
-                    </p>
-                    <p>
-                        <strong>0800-123-456</strong>
-                    </p>
-                    <p>
-                        Lunes a viernes
-                        8:00 a 18:00
-                    </p>
+        <h1>Centro de ayuda</h1>
+        <p>Le acompañamos en cada paso del sistema de turnos</p>
+    </section>
 
-                </div>
+    <!-- CONTACTO -->
+    <section class="ayuda-contacto">
 
-                <div class="cardAyuda">
+        <article class="card">
+            <span class="material-symbols-rounded">call</span>
+            <h2>Teléfono</h2>
+            <p><strong>0800-123-456</strong></p>
+            <p>8:00 a 18:00 hs</p>
+        </article>
 
-                    <h2>📧 Correo</h2>
-                    <p>
-                        saludsenior@gmail.com
-                    </p>
-                    <p>
-                        Respondemos dentro de las 24 horas.
-                    </p>
+        <article class="card">
+            <span class="material-symbols-rounded">mail</span>
+            <h2>Email</h2>
+            <p>saludsenior@gmail.com</p>
+            <p>Respuesta en 24 hs</p>
+        </article>
 
-                </div>
+        <article class="card">
+            <span class="material-symbols-rounded">chat</span>
+            <h2>WhatsApp</h2>
+            <p>+54 11 1234-5678</p>
 
-                <div class="cardAyuda">
+            <button id="whatsapp">
+                Abrir chat
+            </button>
+        </article>
 
-                    <h2>💬 WhatsApp</h2>
-                    <p>
-                        +54 11 1234-5678
-                    </p>
+    </section>
 
-                    <button id="whatsapp">
-                        Abrir WhatsApp
-                    </button>
+    <!-- FAQ -->
+    <section class="faq">
 
-                </div>
+        <h2>Preguntas frecuentes</h2>
 
+        <div class="accordion">
+
+            <button class="acordeon">
+                <span class="material-symbols-rounded">expand_more</span>
+                ¿Cómo saco un turno?
+            </button>
+            <div class="panel">
+                Ingrese a “Agendar turno”, seleccione especialidad, médico y confirme.
             </div>
 
-            <h2 class="tituloPreguntas">
-                Preguntas frecuentes
-            </h2>
-
-            <div class="pregunta">
-
-                <button class="acordeon">
-                    ¿Como saco un turno?
-                </button>
-
-                <div class="respuesta">
-                    <p>
-                        Ingrese a "Agendar turno", seleccione la especialidad, el medico y confirme.
-                    </p>
-                </div>
-
+            <button class="acordeon">
+                <span class="material-symbols-rounded">expand_more</span>
+                ¿Cómo cancelo un turno?
+            </button>
+            <div class="panel">
+                Desde “Mis turnos” puede cancelar el turno seleccionado.
             </div>
 
-            <div class="pregunta">
-
-                <button class="acordeon">
-                    ¿Como cancelo un turno?
-                </button>
-
-                <div class="respuesta">
-                    <p>
-                        Entre en "Mis Turnos", seleccione el turno y presione "Cancelar".
-                    </p>
-                </div>
-
+            <button class="acordeon">
+                <span class="material-symbols-rounded">expand_more</span>
+                ¿Puedo reprogramar?
+            </button>
+            <div class="panel">
+                Sí, desde “Mis turnos” seleccione la opción “Reprogramar”.
             </div>
 
-            <div class="pregunta">
+        </div>
 
-                <button class="acordeon">
-                    ¿Puedo cambiar la fecha?
-                </button>
+    </section>
 
-                <div class="respuesta">
-                    <p>
-                        Si. Desde "Mis Turnos" puede elegir la opcion "Reprogramar".
-                    </p>
-                </div>
+    <!-- CONSULTA -->
+    <section class="consulta">
 
-            </div>
+        <h2>Enviar consulta</h2>
+        <p>Un asesor responderá su mensaje</p>
 
-            <h2 class="tituloPreguntas">
-                Enviar una consulta
-            </h2>
+        <form id="consulta">
 
-            <form id="consulta">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="email" id="correo" placeholder="Correo electrónico" required>
 
-                <label> Nombre </label>
-                <input type="text" id="nombre">
+            <textarea id="mensaje" placeholder="Escriba su consulta..." required></textarea>
 
-                <label> Correo </label>
-                <input type="email" id="correo">
-
-                <label> Mensaje </label>
-                <textarea id="mensaje"></textarea>
-
-                <button type="submit">
+            <button type="submit">
                 Enviar consulta
-                </button>
-
-            </form>
-
-            <button class="volver">
-                Volver al inicio
             </button>
 
-        </section>
+        </form>
 
-    </main>
+    </section>
 
-    <footer>
-        <p>
-            © 2026 Salud Senior
-        </p>
+    <!-- VOLVER -->
+    <button class="volver" id="volver">
+        ← Volver al inicio
+    </button>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
     </footer>
-
-    <script src="js/ayuda.js"></script>
+<script src="js/ayuda.js"></script>
 
 </body>
 </html>

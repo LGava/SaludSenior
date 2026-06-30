@@ -1,352 +1,649 @@
+/*=========================================
+    CONFIGURACIÓN GENERAL
+=========================================*/
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#FFFDF9;
+    color:#444;
 
-    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
 
-    background:#F5F5F5;
+    width:100%;
+    min-height:100vh;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    min-height: 100vh;
-
+    line-height:1.6;
 }
 
-.contenedor-principal {
-    width: 100%;
-    /* max-width: 430px;  <-- Borrá o comentá esta línea */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
-.encabezado {
-    background-color: #f8fafc; /* Un gris/azul híper sutil que le da estructura */
-    border-bottom: 1px solid #e2e8f0;
-    padding: 35px 20px;       /* Un poco más de aire arriba y abajo en PC */
-    margin-bottom: 25px;      /* Despega el título del mapa */
-    text-align: center;
-    width: 100%;
-}
+.contenedor-principal{
+    width:100%;
+    max-width:1400px;
+    margin:0 auto;
+    min-height:100vh;
 
-.encabezado h1 {
-
-    font-size: 28px;
-
-    color: #0f172a;
-
-}
-
-/*nuevo*/
-header{
-    height:70px;
-
-    background:#FFFFFF;
+    background:#fff;
 
     display:flex;
-
-    justify-content:space-between;
-    align-items:center;
-
-    padding:0 40px;
-
-    border-bottom:3px solid #6A0DAD;
+    flex-direction:column;
 }
 
-.logo h2{
-    color:#6A0DAD;
-    font-size:32px;
+
+/*=========================================
+    ENCABEZADO
+=========================================*/
+
+.encabezado{
+
+    background:#F8FAFB;
+
+    border-bottom:1px solid #E2E8F0;
+
+    padding:45px 25px;
+
+    text-align:center;
+
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
+.encabezado img{
+
+    width:100px;
+
+    margin-bottom:20px;
+
 }
 
-nav a{
-    text-decoration:none;
-    color:#333333;
+.encabezado h1{
+
+    font-size:34px;
+
+    color:#45627C;
+
+    margin-bottom:10px;
+
+}
+
+.encabezado p{
 
     font-size:20px;
-    font-weight:bold;
-}
 
-nav a:hover{
-    color:#6A0DAD;
-}
-
-.usuario{
-    font-size:30px;
-}
-
-/**/
-
-
-.navegacion {
-
-    margin-top: auto;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 10px;
-
-    border-top: 1px solid #ddd;
+    color:#666;
 
 }
 
-.btn-volver,
-.btn-siguiente {
+/*=========================================
+    ICONO DEL TÍTULO
+=========================================*/
 
-    display: flex;
+.icono-titulo{
 
-    align-items: center;
+    display:block;
 
-    gap: 6px;
+    font-size:70px;
 
-    padding: 10px 18px;
+    color:#7DA7C7;
 
-    border: none;
-
-    border-radius: 12px;
-
-    background: #6A0DAD;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 15px;
+    margin-bottom:15px;
 
 }
 
-.paso {
+/*=========================================
+    LEYENDA
+=========================================*/
 
-    font-weight: bold;
+.leyenda{
 
-    color: #64748b;
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    padding:25px;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
 
 }
 
-.btn-volver:disabled {
-    background-color: #cbd5e1;
+.informacion{
 
-    color: #64748b;
+    width:100%;
 
-    cursor: not-allowed;
+    max-width:700px;
+
+    margin:25px auto;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    background:#FFF8E8;
+
+    border:2px solid #F3E2B2;
+
+    border-radius:18px;
+
 }
 
-.btn-siguiente:disabled {
-    background-color: #cbd5e1;
+.informacion .material-symbols-rounded{
 
-    color: #64748b;
+    font-size:45px;
 
-    cursor: not-allowed;
+    color:#C28A00;
+
 }
 
-.leyenda {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 0;         /* Limpiamos el espacio izquierdo */
-    margin: 20px auto;       /* Centrado horizontal */
-    gap: 5px;
-    width: 100%;
-    max-width: 600px;        /* Mismo ancho máximo que todo lo demás */
+.informacion h3{
+
+    color:#8A6700;
+
+    margin-bottom:8px;
+
+    font-size:22px;
+
+}
+
+.informacion p{
+
+    font-size:18px;
+
+    color:#555;
+
 }
 
 .estado-fecha{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    gap: 2px;
+    gap:15px;
 
-    font-size: 20px;
+    font-size:22px;
+
+}
+
+/*=========================================
+    CÍRCULOS
+=========================================*/
+
+.circulo-disponible,
+.circulo-ocupado,
+.circulo-feriado{
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
 
 }
 
 .circulo-disponible{
 
-    width: 20px;
-
-    height: 20px;
-
-    border-radius: 50%;
-
-    background-color: green;
+    background:#8DCB8A;
 
 }
 
 .circulo-ocupado{
 
-    width: 20px;
-
-    height: 20px;
-
-    border-radius: 50%;
-
-    background-color: rgb(192, 53, 53);
+    background:#E89B95;
 
 }
 
 .circulo-feriado{
 
-    width: 20px;
-
-    height: 20px;
-
-    border-radius: 50%;
-
-    background-color: grey;
+    background:#C8CDD3;
 
 }
 
-.fecha-seleccionada {
-    border-radius: 15px;
-    padding: 15px;
-    border: 2px solid black;
-    margin: 10px auto;       /* Centrado horizontal */
-    width: 100%;
-    max-width: 600px;        /* Mismo ancho máximo que la caja de horarios */
-    background: #6A0DAD;
+.circulo-seleccionado{
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background:#7DA7C7;
+
 }
+
+/*=========================================
+    FECHA SELECCIONADA
+=========================================*/
+
+.fecha-seleccionada{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:25px auto;
+
+    padding:25px 30px;
+
+    border-radius:18px;
+
+    background:#EEF6FB;
+
+    border:2px solid #C7DBEA;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+}
+
+.fecha-seleccionada .material-symbols-rounded{
+
+    font-size:55px;
+
+    color:#5D89A8;
+
+}
+
 .fecha-seleccionada h3{
 
-    margin-bottom: 10px;
-    color: white;
+    color:#45627C;
+
+    font-size:24px;
+
+    margin-bottom:8px;
 
 }
 
 #texto-fecha{
 
-    color: #397da7;
+    color:#444;
 
-    font-size: 18px;
+    font-size:22px;
 
-    font-weight: bold;
-    color: white;
+    font-weight:bold;
 
 }
 
+/*=========================================
+    HORARIOS
+=========================================*/
 
-.horarios {
-    padding: 20px;           /* Le subí un poquito el padding para la compu */
-    margin: 20px auto;       /* Usamos 'auto' para centrar la caja de horarios */
-    border: 2px solid black;
-    width: 100%;
-    max-width: 600px;        /* Un ancho ideal para que no quede gigante */
-    background: white;
-    
+.horarios{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:20px auto;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:18px;
+
+    border:1px solid #E5E7EB;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
 }
 
 .horarios h2{
 
-    margin-bottom: 15px;
+    font-size:28px;
 
-    font-size: 22px;
+    color:#45627C;
 
+    margin-bottom:25px;
 
+    text-align:center;
 
 }
 
-.lista-horarios {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Pasamos de 2 a 4 columnas */
-    gap: 12px;
+.lista-horarios{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
 }
+
+/*=========================================
+    HORARIOS OCUPADOS
+=========================================*/
+
 .hora{
 
-    padding: 15px;
+    padding:18px;
 
-    border: none;
+    border:none;
 
-    border-radius: 12px;
+    border-radius:15px;
 
-    background-color: rgb(192, 53, 53);
+    background:#E89B95;
 
-    font-size: 18px;
+    color:white;
 
-    cursor: pointer;
+    font-size:20px;
 
+    font-weight:bold;
+
+    cursor:not-allowed;
+
+}
+
+/*=========================================
+    HORARIOS DISPONIBLES
+=========================================*/
+
+.hora-disponible{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#A8D5BA;
+
+    color:#24422E;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.hora-disponible:hover{
+
+    background:#94C8A9;
+
+    transform:translateY(-2px);
+
+}
+
+/*=========================================
+    HORARIO SELECCIONADO
+=========================================*/
+
+.hora-disponible.seleccionada{
+
+    background:#7DA7C7;
+
+    color:white;
+
+    border:3px solid #5D89A8;
 
 }
 
 .hora.seleccionada{
 
-    background-color: #397da7;
+    background:#7DA7C7;
 
-    color: white;
-
-}
-
-.hora-disponible{
-
-    padding: 15px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background-color: green;
-
-    font-size: 18px;
-
-    cursor: pointer;
-}
-
-.hora-disponible.seleccionado{
-
-    background: orange;
-    
-    
-
-}
-
-/*footer*/
-footer{
-    background:#333333;
     color:white;
 
-    margin-top:10px;
-    padding:40px;
+}
+/*=========================================
+    DÍA SELECCIONADO
+=========================================*/
+
+.seleccionada,
+.fechaSeleccionada{
+
+    background:#7DA7C7 !important;
+
+    color:white !important;
+
+    border:3px solid #5D89A8 !important;
+
+}
+
+/*=========================================
+    RESUMEN HORARIO
+=========================================*/
+
+.resumen-horario{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:25px auto;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    background:#EDF7F1;
+
+    border:2px solid #C8E6D2;
+
+    text-align:center;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+}
+
+.resumen-horario h3{
+
+    color:#3F6B56;
+
+    margin-bottom:10px;
+
+    font-size:24px;
+
+}
+
+#texto-hora{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#444;
+
+}
+
+/*=========================================
+    NAVEGACIÓN
+=========================================*/
+
+.navegacion{
+
+    margin-top:auto;
 
     display:flex;
-    justify-content:space-around;
 
-    flex-wrap:wrap;
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 40px;
+
+    border-top:1px solid #E5E7EB;
+
+    background:#FCFCFC;
+
 }
 
-footer h3{
-    margin-bottom:20px;
-    color:#FFFFFF;
-}
+.paso{
 
-footer p{
-    margin-bottom:10px;
-}
+    flex:1;
 
-footer hr{
-    width:100%;
-    margin:30px 0;
-}
-
-footer>p{
-    width:100%;
     text-align:center;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#777;
+
+    white-space:nowrap;
+
+}
+/*=========================================
+    BOTONES
+=========================================*/
+
+.btn-volver,
+.btn-siguiente{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:180px;
+
+    padding:18px 28px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#7DA7C7;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-volver:hover,
+.btn-siguiente:hover{
+
+    background:#5D89A8;
+
+}
+
+.btn-volver:disabled,
+.btn-siguiente:disabled{
+
+    background:#D7DDE2;
+
+    color:#888;
+
+    cursor:not-allowed;
+
+}
+
+/*=========================================
+    RESPONSIVE
+=========================================*/
+
+@media(max-width:900px){
+
+    .lista-horarios{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    header{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .lista-horarios{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .navegacion{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .btn-volver,
+    .btn-siguiente{
+
+        width:100%;
+
+    }
+
+    .fecha-seleccionada,
+    .informacion,
+    .leyenda,
+    .resumen-horario,
+    .horarios{
+
+        width:95%;
+
+    }
+
+    .fecha-seleccionada{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .fecha-seleccionada .material-symbols-rounded{
+
+        margin-bottom:10px;
+
+}
+
 }

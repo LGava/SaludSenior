@@ -10,49 +10,74 @@
     <title>Elegir Medico</title>
 
     <link rel="stylesheet" href="css/elegirMedico.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 
 <body>
 
-    <main class="contenedor-principal">
+    <header class="header">
 
-        <header>
+        <div class="header-top">
 
             <div class="logo">
-                <h2>🩺 Salud Senior</h2>
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
             </div>
-
-            <nav>
-                <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="misDatos.html">Mis datos</a></li>
-                    <li><a href="ayuda.html">Ayuda</a></li>
-                </ul>
-            </nav>
 
             <div class="usuario">
-                <p>Hola, Maria</p>
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
             </div>
 
-        </header>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
+
+    </header>
+    
+    <main class="contenedor-principal">
+
+        <!-- ENCABEZADO -->
 
         <section class="encabezado">
 
-            <h1>Elegir Medico/A</h1>
+            <span class="material-symbols-rounded icono-titulo">
+                stethoscope
+            </span>
+
+            <h1>Elegir médico</h1>
+
+            <p>
+                Seleccione el profesional que desea para su consulta.
+            </p>
 
         </section>
 
-        <div class="filtros">
+        <!-- FILTROS -->
+
+        <section class="filtros">
 
             <div class="encabezado-filtros">
 
-                <h3>Filtros</h3>
+                <h2>Filtros</h2>
 
                 <button class="btn-filtros">
 
-                    <span id="boton+" class="material-symbols-outlined">
+                    <span id="boton+" class="material-symbols-rounded">
                         expand_less
                     </span>
 
@@ -60,232 +85,257 @@
 
             </div>
 
-            <div class="contenido-filtros">
+            <div class="contenido-filtros filtros-abiertos">
 
-                <div class="tipos-titulo">
-                    <span>Tipo de Centro:</span>
-                </div>
+                <h3>Tipo de centro</h3>
 
-                <div class="opciones">
-                    <span>Publico</span>
+                <label>
                     <input type="checkbox">
-                </div>
-                <div class="opciones">
-                    <span>Privado</span>
-                    <input type="checkbox">
-                </div>
-                <div class="opciones">
-                    <span>Clinica</span>
-                    <input type="checkbox">
-                </div>
-                <div class="opciones">
-                    <span>Hospital</span>
-                    <input type="checkbox">
-                </div>
+                    Hospital
+                </label>
 
-                <div class="tipos-titulo">
-                    <span>Ordenar por:</span>
-                </div>
-                <div class="opciones">
-                    <span>Precio mayor a menor</span>
-                    <input type="radio" name="zona" class="botonRadio">
-                </div>
-                <div class="opciones">
-                    <span>Precio menor a mayor</span>
-                    <input type="radio" name="zona" class="botonRadio">
-                </div>
+                <label>
+                    <input type="checkbox">
+                    Clínica
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Público
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Privado
+                </label>
+
+                <hr>
+
+                <h3>Ordenar</h3>
+
+                <label>
+                    <input type="radio" name="orden">
+                    Mayor experiencia
+                </label>
+
+                <label>
+                    <input type="radio" name="orden">
+                    Menor experiencia
+                </label>
 
             </div>
 
-        </div>
+        </section>
 
-
+        <!-- BUSCADOR -->
 
         <section class="busqueda">
 
-            <input type="text" placeholder="Buscar medico/a">
+            <span class="material-symbols-rounded">
+                search
+            </span>
+
+            <input
+                type="text"
+                id="buscarMedico"
+                placeholder="Buscar médico">
 
         </section>
 
-        <!-- tarjetas medicas -->
+        <!-- INFORMACIÓN -->
+
+        <section class="info">
+
+            <span class="material-symbols-rounded">
+                info
+            </span>
+
+            <div>
+
+                <h2>Médicos disponibles</h2>
+
+                <p>
+                    Todos los profesionales cuentan con matrícula habilitada.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- LISTA -->
+
         <section class="lista-medicos">
+
+            <!-- MÉDICO -->
 
             <article class="tarjeta-medico">
 
-                <div class="foto-medico">
-
-                    <img src="img/doctor1.png" alt="Doctor">
-
-                </div>
+                <img src="img/doctor1.png" alt="Doctor">
 
                 <div class="informacion-medico">
 
                     <h3 class="nombre-medico">
-                        Dr Alex
+                        Dr. Alex Fernández
                     </h3>
 
-                    <div class="rating-medico">
-
-                        <span class="estrellas">
-                            ⭐⭐⭐⭐⭐
-                        </span>
-
-                        <span class="puntaje">
-                            4.8 (120)
-                        </span>
-
-                    </div>
-
                     <p class="experiencia">
-                        Traumatología • 1 año de experiencia
+                        Traumatología • 10 años de experiencia
                     </p>
 
                     <p class="hospital">
-                        Clinica Norte
+                        Clínica Norte
                     </p>
+
+                    <div class="rating-medico">
+
+                        ⭐⭐⭐⭐⭐
+
+                        <span class="puntaje">
+                            4.9 (320 opiniones)
+                        </span>
+
+                    </div>
 
                 </div>
 
                 <button class="btn-ver">
 
-                    <span class="material-symbols-outlined">
-                        arrow_forward_ios
+                    Seleccionar
+
+                    <span class="material-symbols-rounded">
+                        arrow_forward
                     </span>
 
                 </button>
 
             </article>
 
+            <!-- MÉDICO -->
+
             <article class="tarjeta-medico">
 
-                <div class="foto-medico">
-
-                    <img src="img/doctor2.png" alt="Doctor">
-
-                </div>
+                <img src="img/doctor2.png" alt="Doctor">
 
                 <div class="informacion-medico">
 
                     <h3 class="nombre-medico">
-                        Dr Juan
+                        Dr. Marian López
                     </h3>
 
-                    <div class="rating-medico">
-
-                        <span class="estrellas">
-                            ⭐⭐⭐⭐⭐
-                        </span>
-
-                        <span class="puntaje">
-                            4.8 (120)
-                        </span>
-
-                    </div>
-
                     <p class="experiencia">
-                        Traumatología • 5 año de experiencia
+                        Traumatología • 8 años de experiencia
                     </p>
 
                     <p class="hospital">
                         Hospital Central
                     </p>
 
+                    <div class="rating-medico">
+
+                        ⭐⭐⭐⭐⭐
+
+                        <span class="puntaje">
+                            4.8 (250 opiniones)
+                        </span>
+
+                    </div>
+
                 </div>
 
                 <button class="btn-ver">
 
-                    <span class="material-symbols-outlined">
-                        arrow_forward_ios
+                    Seleccionar
+
+                    <span class="material-symbols-rounded">
+                        arrow_forward
                     </span>
 
                 </button>
 
             </article>
+
+            <!-- MÉDICO -->
+
             <article class="tarjeta-medico">
 
-                <div class="foto-medico">
-
-                    <img src="img/doctor3.png" alt="Doctor">
-
-                </div>
+                <img src="img/doctor4.png" alt="Doctor">
 
                 <div class="informacion-medico">
 
                     <h3 class="nombre-medico">
-                        Dr Julieta
+                        Dr. Juan Pérez
                     </h3>
 
-                    <div class="rating-medico">
-
-                        <span class="estrellas">
-                            ⭐⭐⭐⭐⭐
-                        </span>
-
-                        <span class="puntaje">
-                            4.8 (120)
-                        </span>
-
-                    </div>
-
                     <p class="experiencia">
-                        Traumatología • 3 año de experiencia
+                        Traumatología • 15 años de experiencia
                     </p>
 
                     <p class="hospital">
                         Hospital Municipal
                     </p>
 
+                    <div class="rating-medico">
+
+                        ⭐⭐⭐⭐⭐
+
+                        <span class="puntaje">
+                            5.0 (510 opiniones)
+                        </span>
+
+                    </div>
+
                 </div>
 
                 <button class="btn-ver">
 
-                    <span class="material-symbols-outlined">
-                        arrow_forward_ios
+                    Seleccionar
+
+                    <span class="material-symbols-rounded">
+                        arrow_forward
                     </span>
 
                 </button>
 
             </article>
+
+            <!-- MÉDICO -->
+
             <article class="tarjeta-medico">
 
-                <div class="foto-medico">
-
-                    <img src="img/doctor4.png" alt="Doctor">
-
-                </div>
+                <img src="img/doctor3.png" alt="Doctor">
 
                 <div class="informacion-medico">
 
                     <h3 class="nombre-medico">
-                        Dr Daniel
+                        Dra. Julieta Gómez
                     </h3>
 
-                    <div class="rating-medico">
-
-                        <span class="estrellas">
-                            ⭐⭐⭐⭐⭐
-                        </span>
-
-                        <span class="puntaje">
-                            4.8 (120)
-                        </span>
-
-                    </div>
-
                     <p class="experiencia">
-                        Traumatología • 6 año de experiencia
+                        Traumatología • 12 años de experiencia
                     </p>
 
                     <p class="hospital">
                         Sanatorio del Oeste
                     </p>
 
+                    <div class="rating-medico">
+
+                        ⭐⭐⭐⭐⭐
+
+                        <span class="puntaje">
+                            4.9 (400 opiniones)
+                        </span>
+
+                    </div>
+
                 </div>
 
                 <button class="btn-ver">
 
-                    <span class="material-symbols-outlined">
-                        arrow_forward_ios
+                    Seleccionar
+
+                    <span class="material-symbols-rounded">
+                        arrow_forward
                     </span>
 
                 </button>
@@ -294,17 +344,16 @@
 
         </section>
 
-        <!-- tarjetas medicas -->
-
+        <!-- NAVEGACIÓN -->
 
         <section class="navegacion">
 
-            <button class="btn-volver" data-anterior="elegirLugar.html">
+            <button
+                class="btn-volver"
+                data-anterior="elegirLugar.html">
 
-                <span class="material-symbols-outlined">
-
+                <span class="material-symbols-rounded">
                     arrow_back
-
                 </span>
 
                 Volver
@@ -312,36 +361,38 @@
             </button>
 
             <span class="paso">
-
-                3 de 5
-
+                Paso 3 de 5
             </span>
-
-
 
         </section>
 
-        <footer>
-            <div>
-                <h3>Contacto</h3>
-                <p>0800-123-456</p>
-                <p>saludsenior@gmail.com</p>
-            </div>
-
-            <div>
-                <h3>Horario</h3>
-                <p>Lunes a viernes</p>
-                <p>08:00 a 18:00</p>
-            </div>
-
-            <div>
-                <button id="cerrarSesion">
-                    Cerrar sesion
-                </button>
-            </div>
-        </footer>
-
     </main>
+
+        <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
+    </footer>
 
     <script src="js/navegacion.js"></script>
     <script src="js/elegirMedico.js"></script>

@@ -7,172 +7,184 @@
 
     <title>Inicio | Salud Senior</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <header>
+
+<header class="header">
+
+    <div class="header-top">
 
         <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+            <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+            <h2>Salud Senior</h2>
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="misDatos.html">Mis datos</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
-            </ul>
-        </nav>
 
         <div class="usuario">
-            <p>Hola, Maria</p>
+            <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
         </div>
 
-    </header>
+    </div>
 
-    <section class="accesibilidad">
+    <nav class="nav">
+        <ul>
+            <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+            <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+            <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
+            <li><a href="especialidad.html"><span class="icono material-symbols-rounded">stethoscope</span>Agendar turno</a></li>
+            <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
+        </ul>
+    </nav>
 
+    <div class="accesibilidad-header">
         <button id="aumentar">A+</button>
         <button id="disminuir">A-</button>
         <button id="contraste">Alto contraste</button>
+    </div>
 
-    </section>
+</header>
 
+    <!-- ================= BIENVENIDA ================= -->
     <section class="bienvenidaInicio">
-
+        
         <h1>
-            Bienvenida a Salud Senior
+            Bienvenido a Salud Senior
         </h1>
 
         <p>
-            Seleccione una opcion para comenzar.
+            Seleccione una opción para comenzar su gestión médica.
         </p>
 
     </section>
 
+    <section class="heroInicio">
+        <img src="img/hospital2.jpg" alt="Hospital moderno" class="heroImg">
+
+        <div class="heroTexto">
+            <p><strong>Atención médica simple y segura.</strong></p>
+            <p> Gestioná tus turnos, consultas y datos de forma rápida y accesible</p>
+        </div>
+    </section>
+    <!-- ================= MENU ================= -->
     <main>
-        <section class="menuPrincipal">
 
-            <div class="opcion" id="agendar">
+    <section class="menuPrincipal">
 
-                <h2>📅</h2>
+        <div class="opcion" id="agendar">
+            <span class="material-symbols-rounded">calendar_month</span>
+            <h3>Agendar turno</h3>
+            <p>Solicite una nueva cita médica.</p>
+        </div>
 
-                <h3>Agendar turno</h3>
+        <div class="opcion" id="turnos">
+            <span class="material-symbols-rounded">event</span>
+            <h3>Mis turnos</h3>
+            <p>Consulte sus próximos turnos.</p>
+        </div>
 
-                <p>
-                    Solicite un nuevo turno medico.
-                </p>
-            </div>
+        <div class="opcion" id="historial">
+            <span class="material-symbols-rounded">history</span>
+            <h3>Historial</h3>
+            <p>Revise sus consultas anteriores.</p>
+        </div>
 
-            <div class="opcion" id="turnos">
+        <div class="opcion" id="datos">
+            <span class="material-symbols-rounded">person</span>
+            <h3>Mis datos</h3>
+            <p>Actualice su información personal.</p>
+        </div>
 
-                <h2>📋</h2>
+        <div class="opcion" id="notificaciones">
+            <span class="material-symbols-rounded">notifications</span>
+            <h3>Notificaciones</h3>
+            <p>Recordatorios y alertas médicas.</p>
+        </div>
 
-                <h3>Mis turnos</h3>
-
-                <p>
-                    Consulte sus turnos proximos.
-                </p>
-            </div>
-
-            <div class="opcion" id="historial">
-
-                <h2>📖</h2>
-
-                <h3>Historial</h3>
-
-                <p>
-                    Revise sus consultas anteriores.
-                </p>
-            </div>
-
-            <div class="opcion" id="datos">
-
-                <h2>👤</h2>
-
-                <h3>Mis datos</h3>
-
-                <p>
-                    Modifique su informacion personal.
-                </p>
-            </div>
-
-            <div class="opcion" id="notificaciones">
-
-                <h2>🔔</h2>
-
-                <h3>Notificaciones</h3>
-
-                <p>
-                    Revise recordatorios importantes.
-                </p>
-            </div>
-
-            <div class="opcion" id="ayuda">
-
-                <h2>❓</h2>
-
-                <h3>Ayuda</h3>
-
-                <p>
-                    Comuniquese con nuestro equipo.
-                </p>
-            </div>
-
-        </section>
-    </main>
-
-    <section class="proximoTurno">
-
-        <h2>
-            Proximo turno
-        </h2>
-
-        <div class="tarjetaTurno">
-
-            <h3>
-                Traumatologia
-            </h3>
-
-            <p>
-                Dr. Stephen Strange
-            </p>
-
-            <p>
-                Jueves 16 de mayo
-            </p>
-
-            <p>
-                13:30 hs
-            </p>
-
-            <button>
-                Ver detalles
-            </button>
-
+        <div class="opcion" id="ayuda">
+            <span class="material-symbols-rounded">help</span>
+            <h3>Ayuda</h3>
+            <p>Contacto con asistencia médica.</p>
         </div>
 
     </section>
 
-    <footer>
+    </main>
+
+    <section class="proximoTurno">
+
+        <h2>Próximo turno</h2>
+
+        <div class="tarjetaTurno">
+
+            <div class="turno-header">
+                <span class="material-symbols-rounded iconoTurno">
+                    medical_services
+                </span>
+                <div>
+                    <h3>Traumatología</h3>
+                    <p class="estadoTurno confirmado">Confirmado</p>
+                </div>
+            </div>
+
+            <div class="infoTurno">
+                <p>
+                    <span class="material-symbols-rounded miniIcono">person</span>
+                    Dr. Stephen Strange
+                </p>
+                <p>
+                    <span class="material-symbols-rounded miniIcono">calendar_month</span>
+                    Jueves 16 de mayo
+                </p>
+                <p>
+                    <span class="material-symbols-rounded miniIcono">schedule</span>
+                    13:30 hs
+                </p>
+                <p>
+                    <span class="material-symbols-rounded miniIcono">location_on</span>
+                    Hospital Central - Consultorio 3
+                </p>
+            </div>
+
+            <div class="accionesTurno">
+                <button class="btn-secundario">
+                    Ver detalles
+                </button>
+
+                <button class="btn-principal">
+                    Reprogramar
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
         <div>
             <h3>Contacto</h3>
-            <p>0800-123-456</p>
-            <p>saludsenior@gmail.com</p>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
         </div>
 
         <div>
-            <h3>Horario</h3>
-            <p>Lunes a viernes</p>
-            <p>08:00 a 18:00</p>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
         </div>
 
         <div>
-            <button id="cerrarSesion">
-                Cerrar sesion
-            </button>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
         </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
     </footer>
 
     <script src="js/inicio.js"></script>

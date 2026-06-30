@@ -8,24 +8,40 @@
     <title>Historial Médico | Salud Senior</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 
 <body>
+    <header class="header">
 
-    <header>
+        <div class="header-top">
 
-        <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+            <div class="logo">
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
+            </div>
+
+            <div class="usuario">
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
+            </div>
+
         </div>
 
-        <nav>
+        <nav class="nav">
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="notificaciones.html">Notificaciones</a></li>
-                <li><a href="configuracion.html">Configuración</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="configuracion.html"><span class="icono material-symbols-rounded">settings</span>Configuración</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">history</span>Mis turnos</a></li>
+                <li><a href="notificaciones.html"><span class="icono material-symbols-rounded">notifications</span>Notificaciones</a></li>
+                <li><a href="misDatos.html"><span class="icono material-symbols-rounded">person</span>Mis datos</a></li>
             </ul>
         </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
 
     </header>
 
@@ -33,123 +49,371 @@
 
         <section class="historial">
 
-            <h1>📖 Historial Médico</h1>
+            <h1>
+                <span class="material-symbols-rounded icono-titulo">
+                    medical_information
+                </span>
+
+                Historial Médico
+            </h1>
+
             <p>
                 Consulte todas sus consultas médicas realizadas.
             </p>
 
+            <!-- BUSCADOR -->
+
             <div class="busqueda">
 
-                <input type="text" id="buscar" placeholder="Buscar especialidad o médico">
+                <div class="campoBusqueda">
 
-                <select id="filtro">
-                    <option>Todas las especialidades</option>
-                    <option>Traumatología</option>
-                    <option>Cardiología</option>
-                    <option>Pediatría</option>
-                    <option>Dermatología</option>
-                    <option>Odontología</option>
-                </select>
+                    <span class="material-symbols-rounded">
+                        search
+                    </span>
+
+                    <input type="text"
+                        id="buscar"
+                        placeholder="Buscar especialidad o médico">
+
+                </div>
+
+                <div class="campoBusqueda">
+
+                    <span class="material-symbols-rounded">
+                        filter_alt
+                    </span>
+
+                    <select id="filtro">
+
+                        <option>Todas las especialidades</option>
+                        <option>Traumatología</option>
+                        <option>Cardiología</option>
+                        <option>Pediatría</option>
+                        <option>Dermatología</option>
+                        <option>Odontología</option>
+
+                    </select>
+
+                </div>
 
                 <button id="buscarBtn">
+
+                    <span class="material-symbols-rounded">
+                        search
+                    </span>
+
                     Buscar
+
                 </button>
 
             </div>
 
+            <!-- LISTA -->
+
             <div class="listaHistorial">
 
                 <div class="consulta">
+
                     <div>
-                        <h2>Traumatología</h2>
-                        <p>Dr. Stephen Strange</p>
-                        <p>16 de Mayo de 2026</p>
+
+                        <h2>
+
+                            <span class="material-symbols-rounded">
+                                orthopedics
+                            </span>
+
+                            Traumatología
+
+                        </h2>
+
+                        <p>
+
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>
+
+                            Dr. Stephen Strange
+
+                        </p>
+
+                        <p>
+
+                            <span class="material-symbols-rounded">
+                                calendar_month
+                            </span>
+
+                            16 de Mayo de 2026
+
+                        </p>
+
                     </div>
 
                     <div>
+
                         <span class="atendido">
+
+                            <span class="material-symbols-rounded">
+                                check_circle
+                            </span>
+
                             Atendido
+
                         </span>
 
                         <button>
+
+                            <span class="material-symbols-rounded">
+                                visibility
+                            </span>
+
                             Ver detalle
+
                         </button>
+
                     </div>
 
                 </div>
 
                 <div class="consulta">
+
                     <div>
-                        <h2>Cardiología</h2>
-                        <p>Dra. Ana López</p>
-                        <p>10 de Abril de 2026</p>
+
+                        <h2>
+
+                            <span class="material-symbols-rounded">
+                                cardiology
+                            </span>
+
+                            Cardiología
+
+                        </h2>
+
+                        <p>
+
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>
+
+                            Dra. Ana López
+
+                        </p>
+
+                        <p>
+
+                            <span class="material-symbols-rounded">
+                                calendar_month
+                            </span>
+
+                            10 de Abril de 2026
+
+                        </p>
+
                     </div>
 
                     <div>
+
                         <span class="atendido">
+
+                            <span class="material-symbols-rounded">
+                                check_circle
+                            </span>
+
                             Atendido
+
                         </span>
 
                         <button>
+
+                            <span class="material-symbols-rounded">
+                                visibility
+                            </span>
+
                             Ver detalle
+
                         </button>
+
                     </div>
+
                 </div>
 
                 <div class="consulta">
+
                     <div>
-                        <h2>Dermatología</h2>
-                        <p>Dr. Pablo Díaz</p>
-                        <p>22 de Marzo de 2026</p>
+
+                        <h2>
+
+                            <span class="material-symbols-rounded">
+                                dermatology
+                            </span>
+
+                            Dermatología
+
+                        </h2>
+
+                        <p>
+
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>
+
+                            Dr. Pablo Díaz
+
+                        </p>
+
+                        <p>
+
+                            <span class="material-symbols-rounded">
+                                calendar_month
+                            </span>
+
+                            22 de Marzo de 2026
+
+                        </p>
+
                     </div>
 
                     <div>
+
                         <span class="cancelado">
+
+                            <span class="material-symbols-rounded">
+                                cancel
+                            </span>
+
                             Cancelado
+
                         </span>
 
                         <button>
+
+                            <span class="material-symbols-rounded">
+                                visibility
+                            </span>
+
                             Ver detalle
+
                         </button>
+
                     </div>
+
                 </div>
 
                 <div class="consulta">
+
                     <div>
-                        <h2>Odontología</h2>
-                        <p>Dra. Mariana Ruiz</p>
-                        <p>15 de Enero de 2026</p>
+
+                        <h2>
+
+                            <span class="material-symbols-rounded">
+                                dentistry
+                            </span>
+
+                            Odontología
+
+                        </h2>
+
+                        <p>
+
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>
+
+                            Dra. Mariana Ruiz
+
+                        </p>
+
+                        <p>
+
+                            <span class="material-symbols-rounded">
+                                calendar_month
+                            </span>
+
+                            15 de Enero de 2026
+
+                        </p>
+
                     </div>
 
                     <div>
+
                         <span class="reprogramado">
+
+                            <span class="material-symbols-rounded">
+                                update
+                            </span>
+
                             Reprogramado
+
                         </span>
 
                         <button>
+
+                            <span class="material-symbols-rounded">
+                                visibility
+                            </span>
+
                             Ver detalle
+
                         </button>
+
                     </div>
+
                 </div>
 
             </div>
 
-            <button class="descargar">
-                Descargar historial
-            </button>
+            <div class="accionesHistorial">
 
-            <button class="volver">
-                Volver al inicio
-            </button>
+                <button class="descargar">
+
+                    <span class="material-symbols-rounded">
+                        download
+                    </span>
+
+                    Descargar historial
+
+                </button>
+
+                <button class="volver">
+
+                    <span class="material-symbols-rounded">
+                        arrow_back
+                    </span>
+
+                    Volver al inicio
+
+                </button>
+
+            </div>
 
         </section>
 
     </main>
 
-    <footer>
-        <p>
-            © 2026 Salud Senior
-        </p>
+    <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
     </footer>
 
     <script src="js/historial.js"></script>

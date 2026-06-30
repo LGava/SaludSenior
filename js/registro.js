@@ -1,63 +1,68 @@
+const pasos = document.querySelectorAll(".paso-form");
+const botonesNext = document.querySelectorAll(".btn-siguiente-paso");
+const botonesPrev = document.querySelectorAll(".btn-volver-paso");
+const form = document.getElementById("formRegistro");
+const mensaje = document.getElementById("mensaje");
 
-const formulario = document.getElementById("formRegistro");
-
-formulario.addEventListener("submit", validarRegistro);
-
-function validarRegistro(evento){
-
-    evento.preventDefault();
-
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let dni = document.getElementById("dni").value;
-    let telefono = document.getElementById("telefono").value;
-    let correo = document.getElementById("correo").value;
-    let clave = document.getElementById("clave").value;
-    let confirmar = document.getElementById("confirmar").value;
-
-    if(nombre==""){
-
-        alert("Ingrese su nombre.");
-        return;
-    }
-
-    if(apellido==""){
-
-        alert("Ingrese su apellido.");
-        return;
-    }
-
-    if(dni==""){
-
-        alert("Ingrese su DNI.");
-        return;
-    }
-
-    if(telefono==""){
-
-        alert("Ingrese su teléfono.");
-        return;
-    }
-
-    if(correo==""){
-
-        alert("Ingrese su correo.");
-        return;
-    }
-
-    if(clave==""){
-
-        alert("Ingrese una contraseña.");
-        return;
-    }
-
-    if(clave!=confirmar){
-
-        alert("Las contraseñas no coinciden.");
-        return;
-    }
-
-    alert("Registro realizado correctamente.");
-
-    window.location.href="login.html";
+function mostrarPaso(id){
+    pasos.forEach(p => p.classList.remove("activo"));
+    document.getElementById(id).classList.add("activo");
 }
+
+/* SIGUIENTE */
+botonesNext.forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+        mostrarPaso(btn.dataset.next);
+    });
+});
+
+/* VOLVER */
+botonesPrev.forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+        mostrarPaso(btn.dataset.prev);
+    });
+});
+
+/* FINAL REGISTRO */
+form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const apellido = document.getElementById("apellido").value.trim();
+    const dni = document.getElementById("dni").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const correo = document.getElementById("correo").value.trim();
+    const clave = document.getElementById("clave").value;
+    const confirmar = document.getElementById("confirmar").value;
+
+    if(!nombre || !apellido || !dni || !telefono || !correo || !clave){
+        mensaje.textContent = "Complete todos los campos";
+        mensaje.style.color = "red";
+        return;
+    }
+
+    if(clave !== confirmar){
+        mensaje.textContent = "Las contraseñas no coinciden";
+        mensaje.style.color = "red";
+        return;
+    }
+
+    // 🔥 GUARDADO ÚNICO Y CORRECTO
+    const usuario = {
+        nombre,
+        apellido,
+        dni,
+        telefono,
+        correo,
+        clave
+    };
+
+    sessionStorage.setItem("usuario", JSON.stringify(usuario));
+
+    mensaje.textContent = "Cuenta creada correctamente";
+    mensaje.style.color = "green";
+
+    setTimeout(()=>{
+        window.location.href = "login.html";
+    },1200);
+});

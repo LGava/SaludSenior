@@ -10,49 +10,77 @@
     <title>Elegir Horario</title>
 
     <link rel="stylesheet" href="css/elegirHorario.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
+
 
 <body>
 
-    <main class="contenedor-principal">
+    <header class="header">
 
-        <header>
+        <div class="header-top">
 
             <div class="logo">
-                <h2>🩺 Salud Senior</h2>
+                <span class="material-symbols-rounded icono"><a href="inicio.html">medical_services</a></span>
+                <h2>Salud Senior</h2>
             </div>
-
-            <nav>
-                <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="misDatos.html">Mis datos</a></li>
-                    <li><a href="ayuda.html">Ayuda</a></li>
-                </ul>
-            </nav>
 
             <div class="usuario">
-                <p>Hola, Maria</p>
+                <span class="material-symbols-rounded icono"><a href="misDatos.html">account_circle</a></span>
             </div>
 
-        </header>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
+            </ul>
+        </nav>
+
+        <div class="accesibilidad-header">
+            <button id="aumentar">A+</button>
+            <button id="disminuir">A-</button>
+            <button id="contraste">Alto contraste</button>
+        </div>
+
+    </header>
+
+    <main class="contenedor-principal">
 
         <section class="encabezado">
 
-            <h1>Elegir Horario</h1>
+            <span class="material-symbols-rounded icono-titulo">
+                schedule
+            </span>
+
+            <h1>Elegir horario</h1>
+
+            <p>
+                Seleccione el horario disponible que mejor se adapte a usted.
+            </p>
 
         </section>
 
         <section class="fecha-seleccionada">
 
-            <h3>Fecha seleccionada</h3>
+            <span class="material-symbols-rounded">
+                calendar_month
+            </span>
 
-            <p id="texto-fecha">
+            <div>
 
-                Jueves 17 de Junio
+                <h3>Fecha seleccionada</h3>
 
-            </p>
+                <p id="texto-fecha">
+                    Cargando fecha...
+                </p>
+
+            </div>
 
         </section>
 
@@ -74,8 +102,28 @@
 
             <div class="estado-fecha">
 
-                <span class="circulo-feriado"></span>
-                <span>Feriado</span>
+                <span class="circulo-seleccionado"></span>
+                <span>No disponible</span>
+
+            </div>
+
+        </section>
+
+        <section class="informacion">
+
+            <span class="material-symbols-rounded">
+                info
+            </span>
+
+            <div>
+
+                <h3>Importante</h3>
+
+                <p>
+                    Los horarios marcados en verde están disponibles para reservar.
+                    Una vez elegido un horario podrá revisar toda la información antes
+                    de confirmar el turno.
+                </p>
 
             </div>
 
@@ -105,20 +153,38 @@
                 <button class="hora">13:00</button>
                 <button class="hora-disponible">13:30</button>
 
+                <button class="hora-disponible">14:00</button>
+                <button class="hora-disponible">14:30</button>
+
+                <button class="hora">15:00</button>
+                <button class="hora-disponible">15:30</button>
+
+                <button class="hora-disponible">16:00</button>
+                <button class="hora-disponible">16:30</button>
+
+                <button class="hora">17:00</button>
+                <button class="hora-disponible">17:30</button>
+
             </div>
 
         </section>
 
+        <section class="resumen-horario">
 
+            <h3>Horario seleccionado</h3>
+
+            <p id="texto-hora">
+                Aún no seleccionó un horario.
+            </p>
+
+        </section>
 
         <section class="navegacion">
 
             <button class="btn-volver" data-anterior="elegirFecha.html">
 
-                <span class="material-symbols-outlined">
-
+                <span class="material-symbols-rounded">
                     arrow_back
-
                 </span>
 
                 Volver
@@ -126,46 +192,49 @@
             </button>
 
             <span class="paso">
-
-                5 de 5
-
+                Paso 5 de 5
             </span>
 
-            <button class="btn-siguiente" disabled data-siguiente="resumenTurno.html">
-                Siguiente
+           <button class="btn-siguiente" data-siguiente="resumen">
+                Confirmar Turno
 
                 <span class="material-symbols-outlined">
                     arrow_forward
                 </span>
-
-
-
             </button>
 
         </section>
 
-        <footer>
-            <div>
-                <h3>Contacto</h3>
-                <p>0800-123-456</p>
-                <p>saludsenior@gmail.com</p>
-            </div>
-
-            <div>
-                <h3>Horario</h3>
-                <p>Lunes a viernes</p>
-                <p>08:00 a 18:00</p>
-            </div>
-
-            <div>
-                <button id="cerrarSesion">
-                    Cerrar sesion
-                </button>
-            </div>
-        </footer>
-
     </main>
+
+    <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
+    </footer>
+
     <script src="js/navegacion.js"></script>
+    <script src="js/elegirHorario.js"></script>
 
 </body>
 

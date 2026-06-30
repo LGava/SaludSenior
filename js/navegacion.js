@@ -1,96 +1,81 @@
+document.addEventListener("DOMContentLoaded", () => {
 
+    function ir(pagina) {
+        if (pagina) window.location.href = pagina;
+    }
 
-let botonSiguiente = document.querySelector(".btn-siguiente");
-let botonVolver = document.querySelector(".btn-volver");
+    const botonVolver = document.querySelector(".btn-volver");
+    const botonSiguiente = document.querySelector(".btn-siguiente");
+    const botonCerrar = document.getElementById("cerrarSesion");
 
+    /* VOLVER */
+    if (botonVolver) {
+        botonVolver.addEventListener("click", function () {
+            ir(this.dataset.anterior);
+        });
+    }
 
-if (botonSiguiente) {
-botonSiguiente.addEventListener("click", () => {
+    /* SIGUIENTE */
+    if (botonSiguiente) {
+        botonSiguiente.addEventListener("click", function () {
 
-    let pagina = botonSiguiente.dataset.siguiente;
+            if (this.disabled) return;
 
-    window.location.href = pagina;
-    
+            const proceso = sessionStorage.getItem("proceso");
 
-});
+            const destino = this.dataset.siguiente;
 
-}
-if (botonVolver) {
-    
-botonVolver.addEventListener("click", () => {
+            // CASO ESPECIAL
+            if (destino === "resumen") {
+                if (proceso === "reprogramar") {
+                    ir("resumenReprogramacion.html");
+                } else {
+                    ir("resumenTurno.html");
+                }
+                return;
+            }
 
-    let pagina = botonVolver.dataset.anterior;
+            ir(destino);
+        });
+    }
 
-    window.location.href = pagina;
+    /* CERRAR SESIÓN */
+    if (botonCerrar) {
+        botonCerrar.addEventListener("click", function () {
 
-});
+            if (confirm("¿Desea cerrar la sesión?")) {
+                sessionStorage.clear();
+                ir("index.html");
+            }
 
-}
+        });
+    }
 
-let botonesVer = document.querySelectorAll(".btn-ver");
+    /* CALENDARIO */
+    document.querySelectorAll(".dia").forEach(dia => {
 
-botonesVer.forEach((boton) => {
+        dia.addEventListener("click", function () {
 
-    boton.addEventListener("click", () => {
+            document.querySelectorAll(".dia").forEach(d =>
+                d.classList.remove("seleccionado")
+            );
 
-        window.location.href = "elegirFecha.html";
+            this.classList.add("seleccionado");
 
-    });
+            sessionStorage.setItem("fecha", this.textContent.trim());
 
-});
-
-
-//calendario 
-let dias = document.querySelectorAll(".dia");
-
-dias.forEach((dia) => {
-
-    dia.addEventListener("click", () => {
-
-        dias.forEach((d) => {
-
-            d.classList.remove("seleccionado");
+            if (botonSiguiente) botonSiguiente.disabled = false;
 
         });
 
-        dia.classList.add("seleccionado");
-        botonSiguiente.disabled = false;
     });
 
-});
+    /* USUARIO */
+    const nombre = sessionStorage.getItem("nombre");
+    const textoUsuario = document.getElementById("nombreUsuario");
 
-//HORARIO
-
-let horas = document.querySelectorAll(".hora-disponible");
-
-horas.forEach((hora) => {
-
-    hora.addEventListener("click", () => {
-
-        horas.forEach((d) => {
-
-            d.classList.remove("seleccionado");
-
-        });
-
-        hora.classList.add("seleccionado");
-        botonSiguiente.disabled = false;
-    });
+    if (textoUsuario) {
+        textoUsuario.textContent = nombre ? "Hola, " + nombre : "Hola";
+    }
 
 });
-
-//turno confirmado inicio
-
-let botonInicio = document.querySelector(".btn-volver2");
-
-if (botonInicio) {
-botonInicio.addEventListener("click", () => {
-
-    let pagina = botonInicio.dataset.anterior;
-
-    window.location.href = pagina;
-    
-
-});
-
-}

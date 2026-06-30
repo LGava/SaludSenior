@@ -7,103 +7,109 @@
 
     <title>Registrarse | Salud Senior</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <header>
+    <header class="header">
 
         <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+            <span class="material-symbols-rounded icono">medical_services</span>
+            <h2>Salud Senior</h2>
         </div>
 
-        <nav>
+        <nav class="nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="login.html">Iniciar sesión</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="login.html"><span class="icono material-symbols-rounded">person</span>Iniciar sesion</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
-        <section class="registro">
+        <section class="registro-pro">
 
-            <h1>Crear una cuenta</h1>
-            <p>
-                Complete sus datos para registrarse.
-            </p>
+            <h1>Crear cuenta de paciente</h1>
+            <p class="subtitulo">Complete sus datos para acceder al sistema de turnos</p>
+
+            <!-- PROGRESO -->
+            <div class="progreso">
+                <div class="paso activo">1</div>
+                <div class="linea"></div>
+                <div class="paso">2</div>
+                <div class="linea"></div>
+                <div class="paso">3</div>
+            </div>
 
             <form id="formRegistro">
 
-                <div class="fila">
+                <!-- PASO 1 -->
+                <div class="paso-form activo" id="paso1">
 
-                    <div>
-                        <label>Nombre</label>
-                        <input type="text" id="nombre">
-                    </div>
+                    <h2>Datos personales</h2>
 
-                    <div>
-                        <label>Apellido</label>
-                        <input type="text" id="apellido">
-                    </div>
+                    <label>Nombre</label>
+                    <input type="text" id="nombre">
 
-                </div>
+                    <label>Apellido</label>
+                    <input type="text" id="apellido">
 
-                <div class="fila">
+                    <label>DNI</label>
+                    <input type="text" id="dni">
 
-                    <div>
-                        <label>DNI</label>
-                        <input type="text" id="dni">
-                    </div>
-
-                    <div>
-                        <label>Fecha de nacimiento</label>
-                        <input type="date" id="fecha">
-                    </div>
+                    <button type="button" class="btn-siguiente-paso" data-next="paso2">
+                        Continuar
+                    </button>
 
                 </div>
 
-                <div class="fila">
+                <!-- PASO 2 -->
+                <div class="paso-form" id="paso2">
 
-                    <div>
-                        <label>Teléfono</label>
-                        <input type="text" id="telefono">
-                    </div>
+                    <h2>Contacto</h2>
 
-                    <div>
-                        <label>Correo electrónico</label>
-                        <input type="email" id="correo">
-                    </div>
+                    <label>Teléfono</label>
+                    <input type="text" id="telefono">
+
+                    <label>Correo electrónico</label>
+                    <input type="email" id="correo">
+
+                    <button type="button" class="btn-volver-paso" data-prev="paso1">
+                        Volver
+                    </button>
+
+                    <button type="button" class="btn-siguiente-paso" data-next="paso3">
+                        Continuar
+                    </button>
 
                 </div>
 
-                <label>Contraseña</label>
-                <input type="password" id="clave">
+                <!-- PASO 3 -->
+                <div class="paso-form" id="paso3">
 
-                <label>Confirmar contraseña</label>
-                <input type="password" id="confirmar">
+                    <h2>Seguridad</h2>
 
-                <button type="submit">
-                    Crear cuenta
-                </button>
+                    <label>Contraseña</label>
+                    <input type="password" id="clave">
+
+                    <label>Confirmar contraseña</label>
+                    <input type="password" id="confirmar">
+
+                    <button type="button" class="btn-volver-paso" data-prev="paso2">
+                        Volver
+                    </button>
+
+                    <button type="submit" class="btn-final">
+                        Crear cuenta
+                    </button>
+
+                </div>
 
             </form>
 
-            <p class="centrado">
-
-                ¿Ya tiene una cuenta?
-
-                <a href="login.html">
-                    Iniciar sesión
-                </a>
-
-            </p>
-
-            <button class="volver" onclick="location.href='index.html'">
-                Volver al inicio
-            </button>
+            <p id="mensaje"></p>
 
         </section>
     </main>

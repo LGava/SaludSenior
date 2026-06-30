@@ -10,91 +10,164 @@
     <title>Turno Confirmado</title>
 
     <link rel="stylesheet" href="css/resumenTurno.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 
 <body>
 
     <main class="contenedor-principal">
 
-        <header>
+        <!-- ENCABEZADO -->
+        <section class="encabezado-confirmacion">
 
-            <div class="logo">
-                <h2>🩺 Salud Senior</h2>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="misDatos.html">Mis datos</a></li>
-                    <li><a href="ayuda.html">Ayuda</a></li>
-                </ul>
-            </nav>
-
-            <div class="usuario">
-                <p>Hola, Maria</p>
-            </div>
-
-        </header>
-
-        <section class="encabezado">
-
-            <h1>Turno Confirmado</h1>
-
-        </section>
-
-
-        <div class="icono-resumen2">
-
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-rounded icono-ok">
                 check_circle
             </span>
 
-        </div>
+            <h1>Turno confirmado</h1>
 
-        <span class="confirmado">
-            ¡ Tu Turno esta confirmado !
-        </span>
-
-        <span class="extra">
-            Te enviamos los detalles a tu mail y telefono
-        </span>
-
-        <section class="navegacion2">
-
-            <button class="btn-volver2" data-anterior="index.html">
-
-                Inicio
-
-            </button>
-
+            <p>
+                Su turno fue reservado correctamente
+            </p>
 
         </section>
 
-        <footer>
-            <div>
-                <h3>Contacto</h3>
-                <p>0800-123-456</p>
-                <p>saludsenior@gmail.com</p>
+        <!-- TARJETA RESUMEN -->
+        <section class="resumen-turno">
+
+            <div class="card-confirmacion">
+
+                <h2>Resumen del turno</h2>
+
+                <hr>
+
+                <div class="fila-resumen">
+
+                    <span class="material-symbols-rounded">
+                        medical_services
+                    </span>
+
+                    <div>
+                        <strong>Especialidad</strong>
+                        <p id="especialidad"></p>
+                    </div>
+
+                </div>
+
+                <div class="fila-resumen">
+
+                    <span class="material-symbols-rounded">
+                        calendar_month
+                    </span>
+
+                    <div>
+                        <strong>Fecha</strong>
+                        <p id="fecha"></p>
+                    </div>
+
+                </div>
+
+                <div class="fila-resumen">
+
+                    <span class="material-symbols-rounded">
+                        schedule
+                    </span>
+
+                    <div>
+                        <strong>Hora</strong>
+                        <p id="hora"></p>
+                    </div>
+
+                </div>
+
+                <div class="fila-resumen">
+
+                    <span class="material-symbols-rounded">
+                        location_on
+                    </span>
+
+                    <div>
+                        <strong>Sede</strong>
+                        <p id="lugar"></p>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div>
-                <h3>Horario</h3>
-                <p>Lunes a viernes</p>
-                <p>08:00 a 18:00</p>
-            </div>
+        </section>
 
-            <div>
-                <button id="cerrarSesion">
-                    Cerrar sesion
-                </button>
-            </div>
-        </footer>
+        <!-- MENSAJE EXTRA -->
+        <section class="info-confirmacion">
+
+            <span class="material-symbols-rounded">
+                mail
+            </span>
+
+            <p>
+                Te enviamos los detalles a tu correo y teléfono registrado.
+            </p>
+
+        </section>
+
+        <!-- BOTONES -->
+        <section class="navegacion2">
+
+            <button class="btn-volver2" data-anterior="inicio.html">
+
+                <span class="material-symbols-rounded">
+                    home
+                </span>
+
+                Volver al inicio
+
+            </button>
+
+            <button class="btn-secundario"
+                    onclick="window.location.href='misTurnos.html'">
+
+                Ver mis turnos
+
+                <span class="material-symbols-rounded">
+                    event
+                </span>
+
+            </button>
+
+        </section>
 
     </main>
+
+
+    <footer class="footer">
+
+        <div>
+            <h3>Contacto</h3>
+            <p>📞 0800-123-456</p>
+            <p>✉ saludsenior@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes</p>
+            <p>8:00 a 18:00</p>
+        </div>
+
+        <div>
+            <h3>Información</h3>
+            <p>Política de Privacidad</p>
+            <p>Términos y Condiciones</p>
+        </div>
+
+        <hr>
+
+        <p>© 2026 Salud Senior - Todos los derechos reservados.</p>
+
+    </footer>
+
     <script src="js/navegacion.js"></script>
-
+    <script src="js/turnoConfirmado.js"></script>
 </body>
-
 </html>

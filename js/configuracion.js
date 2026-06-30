@@ -1,50 +1,131 @@
+//=====================================
+// TAMAÑO DE LETRA
+//=====================================
 
-let tamaño=20;
+let tamaño = 20;
 
-document.getElementById("aumentar").onclick=function(){
+const botonAumentar = document.getElementById("aumentar");
+const botonDisminuir = document.getElementById("disminuir");
+const botonNormal = document.getElementById("normal");
 
-    tamaño+=2;
-    document.body.style.fontSize=tamaño+"px";
-}
+botonAumentar.addEventListener("click", function () {
 
-document.getElementById("disminuir").onclick=function(){
+    tamaño += 2;
+    document.body.style.fontSize = tamaño + "px";
 
-    if(tamaño>16){
+});
 
-        tamaño-=2;
-        document.body.style.fontSize=tamaño+"px";
+botonDisminuir.addEventListener("click", function () {
+
+    if (tamaño > 16) {
+
+        tamaño -= 2;
+        document.body.style.fontSize = tamaño + "px";
+
     }
-}
 
-document.getElementById("normal").onclick=function(){
+});
 
-    tamaño=20;
-    document.body.style.fontSize="20px";
-}
+botonNormal.addEventListener("click", function () {
 
-let contraste=false;
+    tamaño = 20;
+    document.body.style.fontSize = "20px";
 
-document.getElementById("contraste").onclick=function(){
+});
 
-    if(contraste==false){
 
-        document.body.style.background="#000";
-        document.body.style.color="#FFF";
+//=====================================
+// ALTO CONTRASTE
+//=====================================
 
-        contraste=true;
-    }else{
+let contraste = false;
 
-        document.body.style.background="#F5F5F5";
-        document.body.style.color="#333";
+const botonContraste = document.getElementById("contraste");
 
-        contraste=false;
+botonContraste.addEventListener("click", function () {
+
+    contraste = !contraste;
+
+    if (contraste) {
+
+        document.body.classList.add("alto-contraste");
+        this.textContent = "Desactivar contraste";
+
+    } else {
+
+        document.body.classList.remove("alto-contraste");
+        this.textContent = "Activar contraste";
+
     }
-}
 
-document.getElementById("guardar").onclick=function(){
+});
+
+
+//=====================================
+// SONIDOS
+//=====================================
+
+const sonidos = document.getElementById("sonidos");
+
+sonidos.addEventListener("change", function () {
+
+    if (this.checked) {
+
+        alert("Los sonidos fueron activados.");
+
+    } else {
+
+        alert("Los sonidos fueron desactivados.");
+
+    }
+
+});
+
+
+//=====================================
+// GUARDAR CONFIGURACIÓN
+//=====================================
+
+const botonGuardar = document.getElementById("guardar");
+
+botonGuardar.addEventListener("click", function () {
+
     alert("La configuración fue guardada correctamente.");
-}
 
-document.querySelector(".volver").onclick=function(){
-    window.location="inicio.html";
+});
+
+
+//=====================================
+// VOLVER
+//=====================================
+
+const botonVolver = document.querySelector(".volver");
+
+botonVolver.addEventListener("click", function () {
+
+    window.location.href = "inicio.html";
+
+});
+
+
+//=====================================
+// MOSTRAR USUARIO
+//=====================================
+
+const textoUsuario = document.getElementById("nombreUsuario");
+
+if (textoUsuario) {
+
+    const nombre = sessionStorage.getItem("nombre");
+
+    if (nombre) {
+
+        textoUsuario.textContent = "Hola, " + nombre;
+
+    } else {
+
+        textoUsuario.textContent = "Hola";
+
+    }
+
 }

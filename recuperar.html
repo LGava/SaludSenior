@@ -8,56 +8,106 @@
     <title>Recuperar contraseña | Salud Senior</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header class="header">
 
         <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+            <span class="material-symbols-rounded icono">medical_services</span>
+            <h2>Salud Senior</h2>
         </div>
 
-        <nav>
+        <nav class="nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="login.html">Iniciar sesion</a></li>
-                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="registro.html"><span class="icono material-symbols-rounded">person</span>Registrarse</a></li>
+                <li><a href="login.html"><span class="icono material-symbols-rounded">person</span>Iniciar sesion</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
+
         <section class="recuperar">
 
-            <h1>¿Olvido su contraseña?</h1>
+            <span class="material-symbols-rounded icono-recuperar">
+                lock_reset
+            </span>
+
+            <h1>Recuperar contraseña</h1>
 
             <p>
-                Escriba su DNI o correo electronico.
-                Le enviaremos instrucciones para recuperar el acceso.
+                Si olvidó su contraseña, ingrese su DNI o su correo electrónico.
+                Le enviaremos las instrucciones para recuperar el acceso a su cuenta.
             </p>
 
             <form id="formRecuperar">
 
-                <label>DNI</label>
-                <input type="text" id="dni" placeholder="Ejemplo: 30123456">
+                <div class="campo">
 
-                <p class="o">O</p>
+                    <label>
+                        <span class="material-symbols-rounded">badge</span>
+                        DNI
+                    </label>
 
-                <label>Correo electronico</label>
-                <input type="email" id="correo" placeholder="correo@ejemplo.com">
+                    <input
+                        type="text"
+                        id="dni"
+                        placeholder="Ej.: 30123456"
+                    >
+
+                </div>
+
+                <div class="separador">
+
+                    <span>O poner:</span>
+
+                </div>
+
+                <div class="campo">
+
+                    <label>
+                        <span class="material-symbols-rounded">mail</span>
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="correo@ejemplo.com"
+                    >
+
+                </div>
 
                 <button type="submit">
-                    Enviar instrucciones
+
+                    Enviar
+                    <span class="material-symbols-rounded">
+                        send
+                    </span>
                 </button>
 
             </form>
 
-            <button class="volver" onclick="location.href='login.html'">
-                Volver al inicio de sesion
-            </button>
+            <div class="accionesRecuperar">
+
+                <button class="volver">
+
+                    <span class="material-symbols-rounded">
+                        arrow_back
+                    </span>
+
+                    Volver al inicio de sesión
+
+                </button>
+
+            </div>
 
         </section>
+
     </main>
 
     <footer>

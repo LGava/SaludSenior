@@ -1,27 +1,49 @@
 const formulario = document.getElementById("formLogin");
+const mensaje = document.createElement("p");
+formulario.appendChild(mensaje);
 
 formulario.addEventListener("submit", validar);
 
+function validar(e){
 
-function validar(evento){
+    e.preventDefault();
 
-    evento.preventDefault();
+    const dni = document.getElementById("dni").value.trim();
+    const clave = document.getElementById("clave").value.trim();
 
-    let dni = document.getElementById("dni").value;
-    let clave = document.getElementById("clave").value;
+    const data = sessionStorage.getItem("usuario");
 
-    if(dni == ""){
+    if(!data){
+        mensaje.textContent = "Debe registrarse primero";
+        mensaje.style.color = "red";
 
-        alert("Ingrese su DNI.");
+        setTimeout(()=>{
+            window.location.href = "registro.html";
+        },1200);
+
         return;
     }
-    if(clave == ""){
 
-        alert("Ingrese su contraseña.");
+    const usuario = JSON.parse(data);
+
+    if(dni !== usuario.dni){
+        mensaje.textContent = "DNI incorrecto";
+        mensaje.style.color = "red";
         return;
     }
 
-    alert("Inicio de sesión correcto.");
+    if(clave !== usuario.clave){
+        mensaje.textContent = "Contraseña incorrecta";
+        mensaje.style.color = "red";
+        return;
+    }
 
-    window.location.href="inicio.html";
+    mensaje.textContent = "Inicio de sesión correcto";
+    mensaje.style.color = "green";
+
+    sessionStorage.setItem("logueado", "true");
+
+    setTimeout(()=>{
+        window.location.href = "inicio.html";
+    },1200);
 }

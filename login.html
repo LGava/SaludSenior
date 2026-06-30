@@ -7,24 +7,25 @@
 
     <title>Iniciar Sesion</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <header>
+    <header class="header">
 
         <div class="logo">
-            <h2>🩺 Salud Senior</h2>
+            <span class="material-symbols-rounded icono">medical_services</span>
+            <h2>Salud Senior</h2>
         </div>
 
-        <nav>
+        <nav class="nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="registro.html">Registrarse</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
+                <li><a href="registro.html"><span class="icono material-symbols-rounded">person</span>Registrarse</a></li>
+                <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
@@ -43,7 +44,7 @@
                 <label> Contraseña </label>
                 <input type="password" id="clave" placeholder="Ingrese su contraseña">
 
-                <button type="submit">
+                <button type="submit" id="btnIngresar">
                     Ingresar
                 </button>
 

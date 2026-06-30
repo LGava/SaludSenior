@@ -1,22 +1,43 @@
-
 const formulario = document.getElementById("formRecuperar");
+const botonVolver = document.querySelector(".volver");
 
-formulario.addEventListener("submit", enviar);
+formulario.addEventListener("submit", recuperarCuenta);
 
-function enviar(evento){
+function recuperarCuenta(evento){
 
     evento.preventDefault();
 
-    let dni = document.getElementById("dni").value;
-    let correo = document.getElementById("correo").value;
+    const dni = document.getElementById("dni").value.trim();
+    const correo = document.getElementById("correo").value.trim();
 
-    if(dni=="" && correo==""){
+    if(dni === "" && correo === ""){
 
-        alert("Ingrese su DNI o su correo electronico.");
+        alert("Ingrese su DNI o su correo electrónico.");
         return;
+
     }
 
-    alert("Las instrucciones fueron enviadas correctamente.");
+    if(correo !== ""){
 
-    window.location.href="login.html";
+        if(!correo.includes("@")){
+
+            alert("Ingrese un correo electrónico válido.");
+            return;
+
+        }
+
+    }
+
+    alert(
+        "Las instrucciones para recuperar su contraseña fueron enviadas correctamente."
+    );
+
+    window.location.href = "login.html";
+
 }
+
+botonVolver.onclick = function(){
+
+    window.location.href = "login.html";
+
+};
