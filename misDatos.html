@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Datos | Salud Senior</title>
+    <link rel="stylesheet" href="css/misDatos.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h2>🩺 Salud Senior</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-datos">
+            
+            <div class="tarjeta-datos">
+                <h2>👤 Información Personal</h2>
+                <hr>
+                <form>
+                    <div class="campo-personalizado">
+                        <label>Nombre:</label>
+                        <input type="text" value="Maria" placeholder="Ingresa tu nombre">
+                    </div>
+
+                    <div class="campo-personalizado">
+                        <label>Apellido:</label>
+                        <input type="text" value="Pérez" placeholder="Ingresa tu apellido">
+                    </div>
+
+                    <div class="campo-personalizado">
+                        <label>DNI (No modificable):</label>
+                        <input type="text" value="42345678" readonly class="campo-bloqueado">
+                    </div>
+
+                    <div class="campo-personalizado">
+                        <label>Email (Opcional):</label>
+                        <input type="email" placeholder="nombre@correo.com">
+                    </div>
+
+                    <button type="submit" class="boton-guardar-datos">Guardar Datos</button>
+                </form>
+            </div>
+
+            <div class="tarjeta-datos">
+                <h2>📋 Mis Turnos</h2>
+                <hr>
+
+                <div class="lista-turnos-datos">
+                    
+                    <div class="turno-item">
+                        <div>
+                            <h3>Traumatologia</h3>
+                            <p class="detalle-datos">Dr. Stephen Strange (Traumatología)</p>
+                            <p class="fecha-datos">Jueves 16 de mayo </p>
+                            <p class="fecha-datos">13:30 hs</p>
+                        </div>
+                        <button class="botonVerDetalles">Ver detalles</button>
+                    </div>
+                </div>
+
+                <button class="volver" onclick="window.location.href='inicio.html'">Volver al Inicio</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h3>Contacto</h3>
+            <p>0800-123-456</p>
+            <p>saludsenior@gmail.com</p>
+        </div>
+        <div>
+            <h3>Horario</h3>
+            <p>Lunes a viernes</p>
+            <p>08:00 a 18:00</p>
+        </div>
+        <div>
+            <button id="cerrarSesion">Cerrar sesion</button>
+        </div>
+    </footer>
+
+</body>
+</html>

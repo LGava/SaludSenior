@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elegir Horario</title>
+
+    <link rel="stylesheet" href="css/resumenTurno.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="contenedor-principal">
+
+        <header>
+
+            <div class="logo">
+                <h2>🩺 Salud Senior</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="misDatos.html">Mis datos</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <div class="usuario">
+                <p>Hola, Maria</p>
+            </div>
+
+        </header>
+
+        <section class="encabezado">
+
+            <h1>Resumen Turno</h1>
+
+        </section>
+
+
+        <div class="icono-resumen">
+
+            <span class="material-symbols-outlined">
+                fact_check
+            </span>
+
+        </div>
+
+        <span class="textoResumen">
+            Resumen del Turno
+        </span>
+
+        <section class="lista-medicos">
+
+            <article class="tarjeta-medico">
+
+                <div class="foto-medico">
+
+                    <img src="assets/img/doctor1.png" alt="Doctor">
+
+                </div>
+
+                <div class="informacion-medico">
+
+                    <h3 class="nombre-medico">
+                        Dr Alex
+                    </h3>
+
+                    <div class="rating-medico">
+
+                        <span class="estrellas">
+                            ⭐⭐⭐⭐⭐
+                        </span>
+
+                        <span class="puntaje">
+                            4.8 (120)
+                        </span>
+
+                    </div>
+
+                    <p class="experiencia">
+                        Traumatología • 1 año de experiencia
+                    </p>
+
+                    <p class="hospital">
+                        Clinica Norte
+                    </p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="detalle-turno">
+
+            <div class="dato-turno">
+
+                <span class="material-symbols-outlined icono">
+                    calendar_month
+                </span>
+
+                <span>Jueves 17 de Junio</span>
+
+            </div>
+
+            <div class="dato-turno">
+
+                <span class="material-symbols-outlined icono">
+                    schedule
+                </span>
+
+                <span>13:30 hs</span>
+
+            </div>
+
+            <div class="dato-turno">
+
+                <span class="material-symbols-outlined icono">
+                    location_on
+                </span>
+
+                <span>Clínica Norte - Av. Rivadavia 1234</span>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="navegacion">
+
+            <button class="btn-volver" data-anterior="elegirHorario.html">
+
+                <span class="material-symbols-outlined">
+
+                    arrow_back
+
+                </span>
+
+                Volver
+
+            </button>
+
+
+            <button class="btn-siguiente" data-siguiente="turnoConfirmado.html">
+                Confirmar Turno
+
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+
+
+
+            </button>
+
+        </section>
+
+        <footer>
+            <div>
+                <h3>Contacto</h3>
+                <p>0800-123-456</p>
+                <p>saludsenior@gmail.com</p>
+            </div>
+
+            <div>
+                <h3>Horario</h3>
+                <p>Lunes a viernes</p>
+                <p>08:00 a 18:00</p>
+            </div>
+
+            <div>
+                <button id="cerrarSesion">
+                    Cerrar sesion
+                </button>
+            </div>
+        </footer>
+
+    </main>
+    <script src="js/navegacion.js"></script>
+
+</body>
+
+</html>

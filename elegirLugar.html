@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elegir Lugar</title>
+
+    <link rel="stylesheet" href="css/elegirLugar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="contenedor-principal">
+
+        <header>
+
+            <div class="logo">
+                <h2>🩺 Salud Senior</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="misDatos.html">Mis datos</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <div class="usuario">
+                <p>Hola, Maria</p>
+            </div>
+
+        </header>
+
+        <section class="encabezado">
+
+            <h1>Elegir Lugar</h1>
+
+        </section>
+
+        <div class="mapa">
+            <img src="img/mapa.png" alt="Mapa">
+        </div>
+
+
+        <section class="busqueda">
+
+            <input type="text" placeholder="Buscar Zona">
+
+        </section>
+
+
+        <section class="especialidades">
+
+            <button class="especialidad">
+
+                <span class="texto">
+
+                    Avellaneda
+
+                </span>
+
+                <span class="material-symbols-outlined">
+
+                    <input type="radio" name="zona" value="banfield" class="botonRadio">
+
+                </span>
+
+            </button>
+
+            <button class="especialidad">
+
+
+
+                <span class="texto">
+
+                    Banfield
+
+                </span>
+
+                <input type="radio" name="zona" value="banfield" class="botonRadio">
+
+            </button>
+
+            <button class="especialidad">
+
+
+
+                <span class="texto">
+
+                    Lanus
+
+                </span>
+
+                <span class="material-symbols-outlined">
+
+                    <input type="radio" name="zona" value="banfield" class="botonRadio">
+
+                </span>
+
+            </button>
+
+            <button class="especialidad">
+
+
+
+                <span class="texto">
+
+                    Palermo
+
+                </span>
+
+                <span class="material-symbols-outlined">
+
+                    <input type="radio" name="zona" value="banfield" class="botonRadio">
+
+                </span>
+
+            </button>
+
+            <button class="especialidad">
+
+                <span class="texto">
+
+                    Belgrano
+
+                </span>
+
+                <span class="material-symbols-outlined">
+
+                    <input type="radio" name="zona" value="banfield" class="botonRadio">
+
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <section class="navegacion">
+
+            <button class="btn-volver" data-anterior="especialidad.html">
+
+                <span class="material-symbols-outlined">
+
+                    arrow_back
+
+                </span>
+
+                Volver
+
+            </button>
+
+            <span class="paso">
+
+                2 de 5
+
+            </span>
+
+            <button class="btn-siguiente" disabled data-siguiente="elegirMedico.html">
+                Siguiente
+
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+
+
+
+            </button>
+
+        </section>
+
+        <footer>
+            <div>
+                <h3>Contacto</h3>
+                <p>0800-123-456</p>
+                <p>saludsenior@gmail.com</p>
+            </div>
+
+            <div>
+                <h3>Horario</h3>
+                <p>Lunes a viernes</p>
+                <p>08:00 a 18:00</p>
+            </div>
+
+            <div>
+                <button id="cerrarSesion">
+                    Cerrar sesion
+                </button>
+            </div>
+        </footer>
+
+    </main>
+    <script src="js/navegacion.js"></script>
+    <script src="js/agendarTurno.js"></script>
+
+</body>
+
+</html>

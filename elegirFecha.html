@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elegir Fecha</title>
+
+    <link rel="stylesheet" href="css/elegirFecha.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="contenedor-principal">
+
+        <header>
+
+            <div class="logo">
+                <h2>🩺 Salud Senior</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="misDatos.html">Mis datos</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <div class="usuario">
+                <p>Hola, Maria</p>
+            </div>
+
+        </header>
+
+        <section class="encabezado">
+
+            <h1>Elegir Fecha</h1>
+
+        </section>
+
+        <section class="leyenda-calendario">
+
+            <div class="estado-fecha">
+
+                <span class="circulo-disponible"></span>
+                <span>Disponible</span>
+
+            </div>
+
+            <div class="estado-fecha">
+
+                <span class="circulo-ocupado"></span>
+                <span>Ocupado</span>
+
+            </div>
+
+            <div class="estado-fecha">
+
+                <span class="circulo-feriado"></span>
+                <span>Feriado</span>
+
+            </div>
+
+        </section>
+
+        <section class="calendario">
+
+            <h2>Junio 2026</h2>
+
+            <div class="dias-semana">
+
+                <span>L</span>
+                <span>M</span>
+                <span>M</span>
+                <span>J</span>
+                <span>V</span>
+                <span>S</span>
+                <span>D</span>
+
+            </div>
+
+            <div class="dias">
+
+                <!-- Primera fila -->
+                <div></div>
+                <button class="fecha-ocupada">1</button>
+                <button class="fecha-ocupada">2</button>
+                <button class="dia">3</button>
+                <button class="feriados">4</button>
+                <button class="fecha-ocupada">5</button>
+                <button class="dia">6</button>
+
+                <!-- Segunda fila -->
+                <button class="fecha-ocupada">7</button>
+                <button class="fecha-ocupada">8</button>
+                <button class="fecha-ocupada">9</button>
+                <button class="fecha-ocupada">10</button>
+                <button class="fecha-ocupada">11</button>
+                <button class="dia">12</button>
+                <button class="feriados">13</button>
+
+                <!-- Tercera fila -->
+                <button class="dia">14</button>
+                <button class="fecha-ocupada">15</button>
+                <button class="feriados">16</button>
+                <button class="dia">17</button>
+                <button class="fecha-ocupada">18</button>
+                <button class="dia">19</button>
+                <button class="dia">20</button>
+
+                <!-- Cuarta fila -->
+                <button class="dia">21</button>
+                <button class="dia">22</button>
+                <button class="fecha-ocupada">23</button>
+                <button class="dia">24</button>
+                <button class="feriados">25</button>
+                <button class="dia">26</button>
+                <button class="fecha-ocupada">27</button>
+
+                <!-- Quinta fila -->
+                <button class="dia">28</button>
+                <button class="feriados">29</button>
+                <button class="dia">30</button>
+
+            </div>
+
+        </section>
+
+        <section class="fecha-seleccionada">
+
+            <h3>Fecha seleccionada</h3>
+
+            <p id="texto-fecha">
+
+                Jueves 17 de Junio
+
+            </p>
+
+        </section>
+
+
+        <section class="navegacion">
+
+            <button class="btn-volver" data-anterior="elegirMedico.html">
+
+                <span class="material-symbols-outlined">
+
+                    arrow_back
+
+                </span>
+
+                Volver
+
+            </button>
+
+            <span class="paso">
+
+                4 de 5
+
+            </span>
+
+            <button class="btn-siguiente" disabled data-siguiente="elegirHorario.html">
+                Siguiente
+
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+
+
+
+            </button>
+
+        </section>
+
+        <footer>
+            <div>
+                <h3>Contacto</h3>
+                <p>0800-123-456</p>
+                <p>saludsenior@gmail.com</p>
+            </div>
+
+            <div>
+                <h3>Horario</h3>
+                <p>Lunes a viernes</p>
+                <p>08:00 a 18:00</p>
+            </div>
+
+            <div>
+                <button id="cerrarSesion">
+                    Cerrar sesion
+                </button>
+            </div>
+        </footer>
+
+    </main>
+    <script src="js/navegacion.js"></script>
+
+</body>
+
+</html>
