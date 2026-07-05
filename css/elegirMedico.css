@@ -95,46 +95,26 @@ body{
 =================================================*/
 .busqueda{
 
-    width:100%;
-    max-width:900px;
-
-    margin:30px auto;
-
-    padding:0 20px;
-
     display:flex;
     align-items:center;
+
     gap:15px;
 
-    background:white;
-
-    border:2px solid #D8E1E7;
-
-    border-radius:18px;
+    padding:20px 50px;
 
 }
 
 .busqueda span{
 
-    color:#6F9DBF;
-    font-size:32px;
+    font-size:35px;
+
+    color:#7DA7C7;
 
 }
 
 .busqueda input{
 
     flex:1;
-
-    border:none;
-
-    outline:none;
-
-    font-size:20px;
-
-    padding:18px 0;
-
-    background:transparent;
-
 }
 /*=================================================
                 INFORMACIÓN

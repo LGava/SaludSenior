@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Elegir Horario</title>
+    <title>Resumen Turno</title>
 
     <link rel="stylesheet" href="css/resumenTurno.css">
     <link rel="stylesheet" href="css/estilos.css">
@@ -35,8 +35,10 @@
         <nav class="nav">
             <ul>
                 <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
-                <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
-                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
+                <li><a href="historial.html"><span
+                            class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a>
+                </li>
                 <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
             </ul>
         </nav>
@@ -52,14 +54,11 @@
     <main class="contenedor-principal">
 
         <section class="encabezado">
-            <h1>Resumen Turno</h1>
+
+            <span class="material-symbols-outlined icono-titulo">fact_check</span>
+            <h1>Resumen del Turno</h1>
+
         </section>
-
-        <div class="icono-resumen">
-            <span class="material-symbols-outlined">fact_check</span>
-        </div>
-
-        <span class="textoResumen">Resumen del Turno</span>
 
         <section class="lista-medicos">
 
@@ -120,7 +119,7 @@
                 Volver
             </button>
 
-            <button class="btn-siguiente" id="confirmar" data-siguente="turnoConfirmado.html">
+            <button class="btn-siguiente" id="confirmar" data-siguiente="turnoConfirmado.html">
                 Confirmar Turno
                 <span class="material-symbols-outlined">arrow_forward</span>
             </button>

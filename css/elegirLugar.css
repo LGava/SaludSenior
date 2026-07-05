@@ -96,56 +96,35 @@ body{
 /*==================================================
                 BUSCADOR
 ==================================================*/
+
 .busqueda{
 
-    width:100%;
-    max-width:900px;
+    display:flex;
+    align-items:center;
 
-    margin:35px auto;
+    gap:15px;
 
-    padding:0;
-
-    position:relative;
+    padding:20px 50px;
 
 }
 
-.busqueda input{
+.busqueda span{
 
-    width:100%;
-
-    padding:18px 20px 18px 65px;
-
-    font-size:20px;
-
-    border:2px solid #D8E1E7;
-
-    border-radius:18px;
-
-}
-
-.buscar-icono{
-
-    position:absolute;
-
-    left:20px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    font-size:32px;
+    font-size:35px;
 
     color:#7DA7C7;
 
 }
 
-.busqueda input:focus{
+.busqueda input{
 
-    border-color:#8DB4CF;
-
-    box-shadow:0 0 8px rgba(141,180,207,.3);
+    flex:1;
 
 }
+
+/*==================================================
+                ESPECIALIDAD
+==================================================*/
 
 .especialidades{
 

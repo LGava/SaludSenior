@@ -2,83 +2,83 @@
                 CONFIGURACIÓN GENERAL
 ==================================================*/
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#FFFDF9;
-    color:#444;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFFDF9;
+    color: #444;
 
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 
-    width:100%;
-    min-height:100vh;
+    width: 100%;
+    min-height: 100vh;
 
-    line-height:1.6;
+    line-height: 1.6;
 }
 
 /*==================================================
                 CONTENEDOR
 ==================================================*/
 
-.contenedor-principal{
-    width:100%;
-    max-width:1400px;
-    margin:0 auto;
-    min-height:100vh;
+.contenedor-principal {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
 
-    background:#fff;
+    background: #fff;
 
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 /*==================================================
                 ENCABEZADO
 ==================================================*/
 
-.encabezado{
+.encabezado {
 
-    background:#F8FAFB;
+    background: #F8FAFB;
 
-    border-bottom:1px solid #E5EAEE;
+    border-bottom: 1px solid #E5EAEE;
 
-    text-align:center;
+    text-align: center;
 
-    padding:45px 20px;
+    padding: 45px 20px;
 
-    margin-bottom:20px;
-
-}
-
-.encabezado img{
-
-    width:110px;
-
-    margin-bottom:15px;
+    margin-bottom: 20px;
 
 }
 
-.encabezado h1{
+.encabezado img {
 
-    font-size:34px;
+    width: 110px;
 
-    color:#4C708A;
-
-    margin-bottom:10px;
+    margin-bottom: 15px;
 
 }
 
-.encabezado p{
+.encabezado h1 {
 
-    font-size:20px;
+    font-size: 34px;
 
-    color:#666;
+    color: #4C708A;
+
+    margin-bottom: 10px;
+
+}
+
+.encabezado p {
+
+    font-size: 20px;
+
+    color: #666;
 
 }
 
@@ -86,15 +86,15 @@ body{
             ICONO DEL TÍTULO
 ==================================================*/
 
-.icono-titulo{
+.icono-titulo {
 
-    display:block;
+    display: block;
 
-    font-size:70px;
+    font-size: 70px;
 
-    color:#5B88A8;
+    color: #5B88A8;
 
-    margin-bottom:15px;
+    margin-bottom: 15px;
 
 }
 
@@ -102,56 +102,56 @@ body{
             INFORMACIÓN DEL TURNO
 ==================================================*/
 
-.info-turno{
+.info-turno {
 
-    width:100%;
-    max-width:700px;
+    width: 100%;
+    max-width: 700px;
 
-    margin:0 auto 30px;
+    margin: 0 auto 30px;
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-    gap:20px;
+    gap: 20px;
 
-    padding:0 20px;
-
-}
-
-.info-turno div{
-
-    background:#F7FBFD;
-
-    border:2px solid #D7E5EF;
-
-    border-radius:18px;
-
-    padding:22px;
-
-    text-align:center;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.05);
+    padding: 0 20px;
 
 }
 
-.info-turno h3{
+.info-turno div {
 
-    color:#4C708A;
+    background: #F7FBFD;
 
-    font-size:22px;
+    border: 2px solid #D7E5EF;
 
-    margin-bottom:10px;
+    border-radius: 18px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
 
 }
 
-.info-turno p{
+.info-turno h3 {
 
-    font-size:21px;
+    color: #4C708A;
 
-    font-weight:bold;
+    font-size: 22px;
 
-    color:#444;
+    margin-bottom: 10px;
+
+}
+
+.info-turno p {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #444;
 
 }
 
@@ -159,21 +159,21 @@ body{
             CALENDARIO
 ==================================================*/
 
-.calendario h2{
+.calendario h2 {
 
-    text-align:center;
+    text-align: center;
 
-    font-size:30px;
+    font-size: 30px;
 
-    color:#4C708A;
+    color: #4C708A;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
 }
 
-.calendario{
+.calendario {
 
-    margin-bottom:35px;
+    margin-bottom: 35px;
 
 }
 
@@ -185,22 +185,22 @@ body{
 .fecha-ocupada,
 .feriados{
 
-    display:flex;
+    width:100%;
+    aspect-ratio:1/1;
 
-    justify-content:center;
+    border:none;
+    border-radius:50%;
 
-    align-items:center;
-
-    font-size:21px;
-
+    font-size:22px;
     font-weight:bold;
+    transition:.3s;
 
 }
 
 .fecha-ocupada,
-.feriados{
+.feriados {
 
-    cursor:not-allowed;
+    cursor: not-allowed;
 
 }
 
@@ -208,29 +208,29 @@ body{
         FECHA SELECCIONADA
 ==================================================*/
 
-.fecha-seleccionada{
+.fecha-seleccionada {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:20px;
-
-}
-
-.fecha-seleccionada .material-symbols-rounded{
-
-    font-size:55px;
-
-    color:#5B88A8;
+    gap: 20px;
 
 }
 
-.fecha-seleccionada div{
+.fecha-seleccionada .material-symbols-rounded {
 
-    text-align:left;
+    font-size: 55px;
+
+    color: #5B88A8;
+
+}
+
+.fecha-seleccionada div {
+
+    text-align: left;
 
 }
 
@@ -238,27 +238,27 @@ body{
                 LEYENDA
 ==================================================*/
 
-.leyenda-calendario{
+.leyenda-calendario {
 
-    flex-direction:row;
+    flex-direction: row;
 
-    justify-content:center;
+    justify-content: center;
 
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
-    gap:35px;
+    gap: 35px;
 
 }
 
-.estado-fecha{
+.estado-fecha {
 
-    background:#F7FBFD;
+    background: #F7FBFD;
 
-    padding:12px 20px;
+    padding: 12px 20px;
 
-    border-radius:12px;
+    border-radius: 12px;
 
-    border:1px solid #D8E4EC;
+    border: 1px solid #D8E4EC;
 
 }
 
@@ -266,17 +266,17 @@ body{
         EFECTOS
 ==================================================*/
 
-.dia:hover{
+.dia:hover {
 
-    transform:scale(1.08);
+    transform: scale(1.08);
 
 }
 
-.fechaSeleccionada{
+.fechaSeleccionada {
 
-    transform:scale(1.12);
+    transform: scale(1.12);
 
-    box-shadow:0 0 10px rgba(91,136,168,.35);
+    box-shadow: 0 0 10px rgba(91, 136, 168, .35);
 
 }
 
@@ -284,33 +284,33 @@ body{
             RESPONSIVE
 ==================================================*/
 
-@media(max-width:700px){
+@media(max-width:700px) {
 
-    .info-turno{
+    .info-turno {
 
-        grid-template-columns:1fr;
-
-    }
-
-    .leyenda-calendario{
-
-        flex-direction:column;
-
-        align-items:flex-start;
+        grid-template-columns: 1fr;
 
     }
 
-    .fecha-seleccionada{
+    .leyenda-calendario {
 
-        flex-direction:column;
+        flex-direction: column;
 
-        text-align:center;
+        align-items: flex-start;
 
     }
 
-    .fecha-seleccionada div{
+    .fecha-seleccionada {
 
-        text-align:center;
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .fecha-seleccionada div {
+
+        text-align: center;
 
     }
 
@@ -320,35 +320,35 @@ body{
                 CALENDARIO
 ==================================================*/
 
-.calendario{
+.calendario {
 
-    background:#FFFFFF;
+    background: #FFFFFF;
 
-    border:2px solid #DCE5EC;
+    border: 2px solid #DCE5EC;
 
-    border-radius:22px;
+    border-radius: 22px;
 
-    padding:30px;
+    padding: 30px;
 
-    margin:25px auto;
+    margin: 25px auto;
 
-    width:100%;
+    width: 100%;
 
-    max-width:620px;
+    max-width: 620px;
 
-    box-shadow:0 6px 18px rgba(0,0,0,.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .05);
 
 }
 
 /* Imagen superior del calendario */
 
-.calendario img{
+.calendario img {
 
-    display:block;
+    display: block;
 
-    width:80px;
+    width: 80px;
 
-    margin:0 auto 20px;
+    margin: 0 auto 20px;
 
 }
 
@@ -356,21 +356,21 @@ body{
             DÍAS DE LA SEMANA
 ==================================================*/
 
-.dias-semana{
+.dias-semana {
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
 
-    text-align:center;
+    text-align: center;
 
-    margin:20px 0;
+    margin: 20px 0;
 
-    font-size:20px;
+    font-size: 20px;
 
-    font-weight:bold;
+    font-weight: bold;
 
-    color:#5B88A8;
+    color: #5B88A8;
 
 }
 
@@ -378,9 +378,9 @@ body{
 
     display:grid;
 
-    grid-template-columns:repeat(7,1fr);
+    grid-template-columns:repeat(7, minmax(0,1fr));
 
-    gap:12px;
+    gap:10px;
 
 }
 
@@ -390,57 +390,57 @@ body{
 
 .dia,
 .fecha-ocupada,
-.feriados{
+.feriados {
 
-    width:65px;
-    height:65px;
+    width: 65px;
+    height: 65px;
 
-    border:none;
-    border-radius:50%;
+    border: none;
+    border-radius: 50%;
 
-    font-size:22px;
+    font-size: 22px;
 
-    font-weight:bold;
+    font-weight: bold;
 
-    transition:.3s;
+    transition: .3s;
 
 }
 
 /* Disponible */
 
-.dia{
+.dia {
 
-    background:#d6d6d6;
+    background: #d6d6d6;
 
-    color:#2F4F2F;
+    color: #2F4F2F;
 
 }
 
-.dia:hover{
+.dia:hover {
 
-    transform:scale(1.08);
+    transform: scale(1.08);
 
-    background:#A6CFAE;
+    background: #A6CFAE;
 
 }
 
 /* Ocupado */
 
-.fecha-ocupada{
+.fecha-ocupada {
 
-    background:#E9A8A8;
+    background: #E9A8A8;
 
-    color:#6E2424;
+    color: #6E2424;
 
 }
 
 /* Feriado */
 
-.feriados{
+.feriados {
 
-    background:#ffffff;
+    background: #ffffff;
 
-    color:#666;
+    color: #666;
 
 }
 
@@ -448,13 +448,13 @@ body{
 
 .dia.seleccionado,
 .seleccionada,
-.fechaSeleccionada{
+.fechaSeleccionada {
 
-    background:#8CB6D9 !important;
+    background: #8CB6D9 !important;
 
-    color:white;
+    color: white;
 
-    border:3px solid #6B99BE;
+    border: 3px solid #6B99BE;
 
 }
 
@@ -462,43 +462,43 @@ body{
                 FECHA ELEGIDA
 ==================================================*/
 
-.fecha-seleccionada{
+.fecha-seleccionada {
 
-    width:100%;
+    width: 100%;
 
-    max-width:620px;
+    max-width: 620px;
 
-    margin:20px auto;
+    margin: 20px auto;
 
-    padding:22px;
+    padding: 22px;
 
-    border-radius:18px;
+    border-radius: 18px;
 
-    background:#EEF6FB;
+    background: #EEF6FB;
 
-    border:2px solid #C9DDEA;
+    border: 2px solid #C9DDEA;
 
-    text-align:center;
-
-}
-
-.fecha-seleccionada h3{
-
-    color:#4C708A;
-
-    margin-bottom:12px;
-
-    font-size:24px;
+    text-align: center;
 
 }
 
-#texto-fecha{
+.fecha-seleccionada h3 {
 
-    color:#444;
+    color: #4C708A;
 
-    font-size:22px;
+    margin-bottom: 12px;
 
-    font-weight:bold;
+    font-size: 24px;
+
+}
+
+#texto-fecha {
+
+    color: #444;
+
+    font-size: 22px;
+
+    font-weight: bold;
 
 }
 
@@ -506,33 +506,33 @@ body{
                 LEYENDA
 ==================================================*/
 
-.leyenda-calendario{
+.leyenda-calendario {
 
-    width:100%;
+    width: 100%;
 
-    max-width:620px;
+    max-width: 620px;
 
-    margin:25px auto;
+    margin: 25px auto;
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    gap:18px;
+    gap: 18px;
 
-    padding:10px;
+    padding: 10px;
 
 }
 
-.estado-fecha{
+.estado-fecha {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:15px;
+    gap: 15px;
 
-    font-size:20px;
+    font-size: 20px;
 
 }
 
@@ -540,31 +540,31 @@ body{
 
 .circulo-disponible,
 .circulo-ocupado,
-.circulo-feriado{
+.circulo-feriado {
 
-    width:24px;
+    width: 24px;
 
-    height:24px;
+    height: 24px;
 
-    border-radius:50%;
-
-}
-
-.circulo-disponible{
-
-    background:#B8D8BE;
+    border-radius: 50%;
 
 }
 
-.circulo-ocupado{
+.circulo-disponible {
 
-    background:#E9A8A8;
+    background: #B8D8BE;
 
 }
 
-.circulo-feriado{
+.circulo-ocupado {
 
-    background:#DADADA;
+    background: #E9A8A8;
+
+}
+
+.circulo-feriado {
+
+    background: #DADADA;
 
 }
 
@@ -572,37 +572,37 @@ body{
                 NAVEGACIÓN
 ==================================================*/
 
-.navegacion{
+.navegacion {
 
-    margin-top:auto;
+    margin-top: auto;
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    align-items:center;
+    align-items: center;
 
-    padding:25px 35px;
+    padding: 25px 35px;
 
-    border-top:1px solid #ECECEC;
+    border-top: 1px solid #ECECEC;
 
-    background:#FCFCFC;
+    background: #FCFCFC;
 
 }
 
-.paso{
+.paso {
 
-    flex:1;
+    flex: 1;
 
-    text-align:center;
+    text-align: center;
 
-    font-size:22px;
+    font-size: 22px;
 
-    font-weight:bold;
+    font-weight: bold;
 
-    color:#777;
+    color: #777;
 
-    white-space:nowrap;
+    white-space: nowrap;
 
 }
 
@@ -611,53 +611,53 @@ body{
 ==================================================*/
 
 .btn-volver,
-.btn-siguiente{
+.btn-siguiente {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:10px;
+    gap: 10px;
 
-    min-width:190px;
+    min-width: 190px;
 
-    padding:18px 28px;
+    padding: 18px 28px;
 
-    border:none;
+    border: none;
 
-    border-radius:16px;
+    border-radius: 16px;
 
-    background:#8CB6D9;
+    background: #8CB6D9;
 
-    color:white;
+    color: white;
 
-    font-size:20px;
+    font-size: 20px;
 
-    font-weight:bold;
+    font-weight: bold;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    transition:.3s;
+    transition: .3s;
 
 }
 
 .btn-volver:hover,
-.btn-siguiente:hover{
+.btn-siguiente:hover {
 
-    background:#6F9FCA;
+    background: #6F9FCA;
 
 }
 
 .btn-volver:disabled,
-.btn-siguiente:disabled{
+.btn-siguiente:disabled {
 
-    background:#D5DEE5;
+    background: #D5DEE5;
 
-    color:#888;
+    color: #888;
 
-    cursor:not-allowed;
+    cursor: not-allowed;
 
 }
 
@@ -666,68 +666,75 @@ body{
                 RESPONSIVE
 ==================================================*/
 
-@media(max-width:900px){
+@media(max-width:900px) {
 
-    header{
+    header {
 
-        flex-direction:column;
+        flex-direction: column;
 
-        height:auto;
+        height: auto;
 
-        padding:20px;
+        padding: 20px;
 
-        gap:20px;
+        gap: 20px;
 
     }
 
-    nav ul{
+    nav ul {
 
-        flex-wrap:wrap;
+        flex-wrap: wrap;
 
-        justify-content:center;
+        justify-content: center;
 
-        gap:20px;
+        gap: 20px;
 
     }
 
 }
 
-@media(max-width:650px){
+@media(max-width:650px) {
 
-    .calendario{
+    .calendario {
 
-        padding:20px;
+        padding: 12px;
 
     }
 
     .dia,
     .fecha-ocupada,
-    .feriados{
+    .feriados {
 
-        width:55px;
-        height:55px;
-        font-size:20px;
+        width: 100%;
+        aspect-ratio: 1;
 
-    }
-
-    .dias-semana{
-
-        font-size:17px;
+        font-size: 18px;
 
     }
 
-    .navegacion{
+    .dias-semana {
 
-        flex-direction:column;
+        font-size: 17px;
 
-        gap:20px;
+    }
+
+    .navegacion {
+
+        flex-direction: column;
+
+        gap: 20px;
 
     }
 
     .btn-volver,
-    .btn-siguiente{
+    .btn-siguiente {
 
-        width:100%;
+        width: 100%;
+
+    }
+
+    .dias {
+
+        gap: 6px;
 
     }
 
