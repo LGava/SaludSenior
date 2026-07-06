@@ -3,9 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // DEFINIR FLUJO
     sessionStorage.setItem("proceso", "reprogramar");
 
-    // LIMPIAR DATOS ANTERIORES
-    sessionStorage.removeItem("fecha");
-    sessionStorage.removeItem("hora");
 
     // Cargar datos del turno original
     document.getElementById("medico").textContent =

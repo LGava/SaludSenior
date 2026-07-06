@@ -8,7 +8,7 @@
     <title>Resumen de Reprogramación</title>
 
     <link rel="stylesheet" href="css/estilos.css">
-     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 
@@ -32,9 +32,12 @@
         <nav class="nav">
             <ul>
                 <li><a href="inicio.html"><span class="icono material-symbols-rounded">home</span>Inicio</a></li>
-                <li><a href="historial.html"><span class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
-                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a></li>
-                <li><a href="especialidad.html"><span class="icono material-symbols-rounded">stethoscope</span>Agendar turno</a></li>
+                <li><a href="historial.html"><span
+                            class="icono material-symbols-rounded">calendar_month</span>Turnos</a></li>
+                <li><a href="misTurnos.html"><span class="icono material-symbols-rounded">event</span>Mis turnos</a>
+                </li>
+                <li><a href="especialidad.html"><span class="icono material-symbols-rounded">stethoscope</span>Agendar
+                        turno</a></li>
                 <li><a href="ayuda.html"><span class="icono material-symbols-rounded">help</span>Ayuda</a></li>
             </ul>
         </nav>
@@ -46,7 +49,7 @@
         </div>
 
     </header>
-    
+
     <main class="contenedor-principal">
 
         <section class="encabezado resumen-header">
@@ -67,29 +70,28 @@
 
             <div class="dato">
                 <h3>Especialidad</h3>
-                <p>Traumatología</p>
+                <p id="especialidad">Traumatología</p>
             </div>
 
             <div class="dato">
                 <h3>Lugar</h3>
-                <p>Hospital Central</p>
+                <p id="lugar">Hospital Central</p>
             </div>
 
             <div class="dato">
                 <h3>Médico</h3>
-                <p>Dr. Stephen Strange</p>
+                <p id="medico">Dr. Stephen Strange</p>
             </div>
 
             <div class="dato">
                 <h3>Nueva fecha</h3>
-                <p>22 de Junio de 2026</p>
+                <p id="fecha">22 de Junio de 2026</p>
             </div>
 
             <div class="dato">
                 <h3>Nuevo horario</h3>
-                <p>11:00 hs</p>
+                <p id="hora">11:00 hs</p>
             </div>
-
         </section>
 
         <section class="mensaje">
@@ -121,8 +123,7 @@
 
         <section class="navegacion">
 
-            <button class="btn-volver"
-                    onclick="location.href='elegirHorario.html'">
+            <button class="btn-volver" onclick="location.href='elegirHorario.html'">
 
                 <span class="material-symbols-rounded">
                     arrow_back
@@ -136,8 +137,7 @@
                 Paso 5 de 5
             </span>
 
-            <button class="btn-siguiente confirmar"
-                    id="confirmar">
+            <button class="btn-siguiente confirmar" id="confirmar" data-siguiente="turnoReprogramado.html">
 
                 Confirmar turno
 
@@ -177,8 +177,9 @@
 
     </footer>
 
-<script src="js/navegacion.js"></script>
-<script src="js/reprogramar.js"></script>
+    <script src="js/navegacion.js"></script>
+    <script src="js/reprogramar.js"></script>
+    <script src="js/resumenReprogramacion.js"></script>
 
 </body>
 

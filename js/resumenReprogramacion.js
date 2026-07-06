@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     set("medico", sessionStorage.getItem("medico"));
     set("especialidad", sessionStorage.getItem("especialidad"));
-    set("hospital", sessionStorage.getItem("hospital"));
-    set("hospital2", sessionStorage.getItem("hospital"));
     set("fecha", sessionStorage.getItem("fecha"));
     set("hora", sessionStorage.getItem("hora"));
     set("lugar", sessionStorage.getItem("lugar"));

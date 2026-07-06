@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const horarios = document.querySelectorAll(".hora-disponible");
     const botonSiguiente = document.querySelector(".btn-siguiente");
     const textoFecha = document.getElementById("texto-fecha");
+    const textoHora = document.getElementById("texto-hora");
 
     // mostrar fecha
     const fechaGuardada = sessionStorage.getItem("fecha");
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             sessionStorage.setItem("hora", horaSeleccionada);
 
-            console.log("HORA GUARDADA:", horaSeleccionada);
+            textoHora.textContent = horaSeleccionada;
 
             botonSiguiente.disabled = false;
 
@@ -50,3 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
