@@ -26,7 +26,9 @@ body{
 
 header{
 
-    height:85px;
+    /*height:85px;*/
+
+    height: auto;
 
     background:#FFFFFF;
 
@@ -34,7 +36,7 @@ header{
 
     justify-content:space-between;
 
-    align-items:center;
+    /*align-items:center;*/
 
     padding:0 50px;
 
@@ -128,6 +130,11 @@ nav a:hover{
 
     flex-wrap:wrap;
 
+}
+
+.turnos{
+    margin: 40px auto;
+    width: 90%;
 }
 
 /*==================================================
@@ -530,6 +537,10 @@ footer>p{
 
     text-align:center;
 
+}
+
+.volver{
+    margin-top: 20px;
 }
 
 /*==================================================
